@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abide Labs — Mobile Software</title>
+  <meta name="description" content="Abide Labs builds thoughtful mobile software. Based in Oklahoma.">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
+
+    :root {
+      --deep:       #0D3D2A;
+      --primary:    #1A7A4A;
+      --mint:       #7FEFB8;
+      --mint-pale:  #D4FAE8;
+      --page:       #F3FAF6;
+      --white:      #ffffff;
+      --t1:         #0D2E1C;
+      --t2:         #3A6B50;
+      --t3:         #7AAD8E;
+      --border:     rgba(26,122,74,0.13);
+      --border-s:   rgba(26,122,74,0.26);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--page);
+      color: var(--t1);
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Layout ── */
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── Nav ── */
+    nav {
+      background: var(--white);
+      border-bottom: 0.5px solid var(--border-s);
+      padding: 0 24px;
+    }
+    .nav-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .nav-logo-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--deep);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .nav-logo-icon svg { display: block; }
+    .nav-logo-text {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--t1);
+      letter-spacing: -0.3px;
+    }
+    .nav-logo-text span { color: var(--primary); }
+    .nav-link {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--t2);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .nav-link:hover { color: var(--primary); }
+
+    /* ── Hero ── */
+    .hero {
+      background: var(--deep);
+      padding: 80px 24px 72px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 480px; height: 480px;
+      border-radius: 50%;
+      border: 1px solid rgba(127,239,184,0.08);
+      right: -120px; top: -120px;
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      width: 280px; height: 280px;
+      border-radius: 50%;
+      border: 1px solid rgba(127,239,184,0.12);
+      right: -40px; top: -40px;
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--mint);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .hero-title {
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 500;
+      color: #fff;
+      line-height: 1.15;
+      letter-spacing: -0.8px;
+      margin-bottom: 20px;
+    }
+    .hero-title span { color: var(--mint); }
+    .hero-sub {
+      font-size: 16px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.55);
+      max-width: 480px;
+      line-height: 1.65;
+      margin-bottom: 32px;
+    }
+    .hero-cta {
+      display: inline-block;
+      background: var(--mint);
+      color: var(--deep);
+      font-size: 13px;
+      font-weight: 500;
+      padding: 11px 22px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .hero-cta:hover { opacity: 0.88; }
+
+    /* ── Section ── */
+    section {
+      padding: 64px 24px;
+    }
+    section + section {
+      padding-top: 0;
+    }
+    .section-label {
+      font-size: 10px;
+      font-weight: 500;
+      color: var(--t3);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--t1);
+      letter-spacing: -0.4px;
+      margin-bottom: 8px;
+    }
+    .section-sub {
+      font-size: 14px;
+      color: var(--t2);
+      line-height: 1.65;
+      max-width: 520px;
+      margin-bottom: 36px;
+    }
+
+    /* ── Apps ── */
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .app-card {
+      background: var(--white);
+      border: 0.5px solid var(--border-s);
+      border-radius: 14px;
+      padding: 22px;
+      text-decoration: none;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .app-card:hover {
+      box-shadow: 0 6px 24px rgba(13,61,42,0.09);
+      transform: translateY(-2px);
+    }
+    .app-icon {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 14px;
+      font-size: 22px;
+    }
+    .app-name {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--t1);
+      letter-spacing: -0.2px;
+      margin-bottom: 5px;
+    }
+    .app-name span { color: var(--primary); }
+    .app-desc {
+      font-size: 13px;
+      color: var(--t2);
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+    .app-status {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 500;
+      padding: 3px 10px;
+      border-radius: 20px;
+    }
+    .status-coming { background: var(--mint-pale); color: var(--primary); }
+    .status-beta   { background: #FEF3DC; color: #C97B0A; }
+
+    /* ── Values ── */
+    .values-divider {
+      border: none;
+      border-top: 0.5px solid var(--border);
+      margin: 0 24px;
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 24px;
+    }
+    .value-item {}
+    .value-icon {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .value-name {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--t1);
+      margin-bottom: 4px;
+    }
+    .value-desc {
+      font-size: 12px;
+      color: var(--t2);
+      line-height: 1.6;
+    }
+
+    /* ── Contact ── */
+    .contact-card {
+      background: var(--deep);
+      border-radius: 16px;
+      padding: 36px 32px;
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-card::before {
+      content: '';
+      position: absolute;
+      width: 240px; height: 240px;
+      border-radius: 50%;
+      border: 1px solid rgba(127,239,184,0.08);
+      right: -60px; bottom: -60px;
+      pointer-events: none;
+    }
+    .contact-card .section-label { color: var(--mint); opacity: 0.7; }
+    .contact-card .section-title { color: #fff; }
+    .contact-card .section-sub   { color: rgba(255,255,255,0.45); margin-bottom: 20px; }
+    .contact-email {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--mint);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(127,239,184,0.3);
+      padding-bottom: 2px;
+      transition: border-color 0.15s;
+    }
+    .contact-email:hover { border-color: var(--mint); }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--white);
+      border-top: 0.5px solid var(--border);
+      padding: 28px 24px;
+    }
+    .footer-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-copy {
+      font-size: 12px;
+      color: var(--t3);
+    }
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+    .footer-link {
+      font-size: 12px;
+      color: var(--t3);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .footer-link:hover { color: var(--primary); }
+
+    /* ── Mobile ── */
+    @media (max-width: 480px) {
+      .hero { padding: 56px 20px 52px; }
+      section { padding: 48px 20px; }
+      .contact-card { padding: 28px 22px; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="nav-logo-icon">
+          <!-- Simple A mark -->
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M8 2L14 13H2L8 2Z" stroke="#7FEFB8" stroke-width="1.4" stroke-linejoin="round" fill="none"/>
+            <path d="M5 9.5h6" stroke="#7FEFB8" stroke-width="1.4" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="nav-logo-text">Abide <span>Labs</span></span>
+      </a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">Mobile Software Studio</div>
+      <h1 class="hero-title">Software that<br><span>ages well.</span></h1>
+      <p class="hero-sub">
+        Abide Labs builds thoughtful mobile applications.<br>
+        Calm interfaces. Durable systems. Based in Oklahoma.
+      </p>
+      <a href="#apps" class="hero-cta">Our Apps</a>
+    </div>
+  </div>
+
+  <!-- Apps -->
+  <section id="apps">
+    <div class="wrap">
+      <div class="section-label">Applications</div>
+      <h2 class="section-title">What we build</h2>
+      <p class="section-sub">Each app solves a real problem with the minimum necessary complexity.</p>
+
+      <div class="apps-grid">
+        <div class="app-card">
+          <div class="app-icon" style="background:#D4FAE8;">📡</div>
+          <div class="app-name">Frugal<span>Radar</span></div>
+          <p class="app-desc">Discover deals, grocery sales, and local promotions near you. Price tracking, deal alerts, and receipt scanning — all in one place.</p>
+          <span class="app-status status-beta">Coming Soon — iOS &amp; Android</span>
+        </div>
+
+        <div class="app-card">
+          <div class="app-icon" style="background:#E8F4FD;">🚗</div>
+          <div class="app-name">Auto<span>wise</span></div>
+          <p class="app-desc">Compare vehicles, estimate total ownership costs, and find the right car for your budget. Smart search with finance and trade-in tools.</p>
+          <span class="app-status status-coming">In Development</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="values-divider">
+
+  <!-- Values -->
+  <section>
+    <div class="wrap">
+      <div class="section-label">Principles</div>
+      <h2 class="section-title">How we work</h2>
+      <p class="section-sub">We hold ourselves to a set of principles that shape every decision.</p>
+
+      <div class="values-grid">
+        <div class="value-item">
+          <div class="value-icon">⚖️</div>
+          <div class="value-name">Simplicity</div>
+          <p class="value-desc">We build the minimum that solves the problem well. No unnecessary complexity.</p>
+        </div>
+        <div class="value-item">
+          <div class="value-icon">🏗️</div>
+          <div class="value-name">Durability</div>
+          <p class="value-desc">Software should age well. We favor stable architectures over trendy ones.</p>
+        </div>
+        <div class="value-item">
+          <div class="value-icon">📐</div>
+          <div class="value-name">Clarity</div>
+          <p class="value-desc">Clear interfaces, readable code, and honest communication with users.</p>
+        </div>
+        <div class="value-item">
+          <div class="value-icon">🔒</div>
+          <div class="value-name">Privacy</div>
+          <p class="value-desc">We collect only what we need and handle user data with care.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-card">
+        <div class="section-label">Contact</div>
+        <h2 class="section-title">Get in touch</h2>
+        <p class="section-sub">Questions, partnerships, or press inquiries — we read everything.</p>
+        <a href="mailto:hello@abidelabs.com" class="contact-email">hello@abidelabs.com</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-copy">© 2026 Abide Labs. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="/privacy" class="footer-link">Privacy</a>
+        <a href="/support" class="footer-link">Support</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
