@@ -43,7 +43,7 @@ nav.scrolled .nav-logo-text{font-size:1.05rem}
 .nav-cta::after{display:none !important}
 
 /* ── HERO ── */
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:8rem 2rem 4rem;position:relative;overflow:hidden}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:8rem 2rem 4rem;position:relative;overflow:hidden;width:100%}
 .hero-bg{position:absolute;inset:0;z-index:0}
 .hero-bg .glow{position:absolute;border-radius:50%;animation:float 25s ease-in-out infinite}
 .hero-bg .glow:nth-child(1){width:700px;height:700px;top:-15%;right:-12%;background:radial-gradient(circle,rgba(212,168,75,.06) 0%,transparent 65%)}
@@ -53,7 +53,7 @@ nav.scrolled .nav-logo-text{font-size:1.05rem}
 .hero::before{content:'';position:absolute;top:0;left:50%;width:1px;height:80px;background:linear-gradient(to bottom,transparent,var(--gold-dim),transparent);z-index:1;opacity:.3}
 
 /* HERO LOGO — interactive pulsating glow */
-.hero-logo-wrap{position:relative;z-index:1;margin-bottom:2.5rem;animation:fadeUp .8s ease both;cursor:pointer}
+.hero-logo-wrap{position:relative;z-index:1;margin:0 auto 2.5rem;animation:fadeUp .8s ease both;cursor:pointer;display:flex;flex-direction:column;align-items:center}
 .hero-logo-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(212,168,75,.2) 0%,rgba(212,168,75,.06) 45%,transparent 70%);animation:pulseGlow 3s ease-in-out infinite;pointer-events:none;transition:all .5s ease}
 .hero-logo-ring{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:180px;height:180px;border-radius:50%;border:1px solid rgba(212,168,75,.12);animation:pulseRing 3s ease-in-out infinite;pointer-events:none}
 .hero-logo-ring2{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:240px;height:240px;border-radius:50%;border:1px solid rgba(212,168,75,.06);animation:pulseRing 3s ease-in-out infinite .6s;pointer-events:none}
@@ -74,13 +74,13 @@ nav.scrolled .nav-logo-text{font-size:1.05rem}
 .icon-glow-wrap:hover img{transform:scale(1.1);filter:drop-shadow(0 0 20px rgba(212,168,75,.5)) drop-shadow(0 0 40px rgba(212,168,75,.2))}
 .icon-glow-wrap:hover .mini-glow{width:120px;height:120px;background:radial-gradient(circle,rgba(212,168,75,.25) 0%,transparent 70%)}
 
-.hero-badge{display:inline-flex;align-items:center;gap:.6rem;border:1px solid rgba(212,168,75,.2);color:var(--gold);padding:.45rem 1.2rem;border-radius:2px;font-size:.7rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;margin-bottom:2.2rem;position:relative;z-index:1;animation:fadeUp .8s ease .1s both;background:rgba(212,168,75,.04)}
+.hero-badge{display:inline-flex;align-items:center;gap:.6rem;border:1px solid rgba(212,168,75,.2);color:var(--gold);padding:.45rem 1.2rem;border-radius:2px;font-size:.7rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;margin:0 auto 2.2rem;position:relative;z-index:1;animation:fadeUp .8s ease .1s both;background:rgba(212,168,75,.04)}
 .hero-badge .pulse{width:5px;height:5px;border-radius:50%;background:var(--gold);position:relative}
 .hero-badge .pulse::after{content:'';position:absolute;inset:-3px;border-radius:50%;border:1px solid var(--gold);animation:ping 2.5s ease-out infinite}
 @keyframes ping{0%{transform:scale(1);opacity:.5}100%{transform:scale(3);opacity:0}}
-.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,6.5vw,5.2rem);line-height:1.1;letter-spacing:-.02em;color:var(--cream);font-weight:400;max-width:750px;position:relative;z-index:1;animation:fadeUp .8s ease .2s both}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,6.5vw,5.2rem);line-height:1.1;letter-spacing:-.02em;color:var(--cream);font-weight:400;max-width:750px;position:relative;z-index:1;animation:fadeUp .8s ease .2s both;margin-left:auto;margin-right:auto}
 .hero h1 em{font-style:italic;background:linear-gradient(135deg,var(--gold-light),var(--gold),var(--gold-dim));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero-sub{font-size:1.05rem;color:var(--gray);line-height:1.75;max-width:440px;margin:1.5rem auto 2.5rem;font-weight:300;letter-spacing:.02em;position:relative;z-index:1;animation:fadeUp .8s ease .35s both}
+.hero-sub{font-size:1.05rem;color:var(--gray);line-height:1.75;max-width:440px;margin:1.5rem auto 2.5rem;font-weight:300;letter-spacing:.02em;position:relative;z-index:1;animation:fadeUp .8s ease .35s both;text-align:center;width:100%}
 .hero-actions{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;position:relative;z-index:1;animation:fadeUp .8s ease .5s both;max-width:480px;margin-left:auto;margin-right:auto}
 .btn-primary{background:var(--gold);color:var(--black);padding:.85rem 0;border-radius:2px;font-size:.82rem;font-weight:600;text-decoration:none;transition:all .35s ease;display:inline-flex;align-items:center;justify-content:center;gap:.6rem;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--gold);flex:1;min-width:180px}
 .btn-primary:hover{background:var(--gold-light);box-shadow:0 0 40px rgba(212,168,75,.2);transform:translateY(-2px)}
@@ -102,7 +102,7 @@ section{padding:6rem 2rem}
 .section-desc{font-size:.95rem;color:var(--gray);line-height:1.75;max-width:480px;margin-top:1rem;font-weight:300}
 
 #apps{background:var(--black)}
-.apps-header{text-align:center;max-width:580px;margin:0 auto 4rem}
+.apps-header{text-align:center;max-width:580px;margin:0 auto 4rem;width:100%}
 .apps-header .section-label{justify-content:center}
 .apps-header .section-label::before{display:none}
 .apps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:1.5rem;max-width:880px;margin:0 auto}
