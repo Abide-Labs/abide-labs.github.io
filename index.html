@@ -67,25 +67,12 @@
       gap: 10px;
       text-decoration: none;
     }
-    .nav-logo-icon {
-      width: 32px;
-      height: 32px;
-      background: rgba(201,168,76,0.1);
-      border: 0.5px solid var(--card-border);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .nav-logo-icon svg { display: block; }
     .nav-logo-text {
       font-size: 15px;
       font-weight: 500;
       color: var(--white);
       letter-spacing: -0.3px;
     }
-    .nav-logo-text span { color: var(--gold); }
     .nav-link {
       font-size: 13px;
       font-weight: 500;
@@ -382,20 +369,8 @@
   <nav>
     <div class="nav-inner">
       <a href="#" class="nav-logo">
-        <div class="nav-logo-icon">
-          <!-- Hexagon with cross/plus negative space — gold stroke, no fill -->
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Pointy-top hexagon, r=6.5 centered at 8,8 -->
-            <polygon
-              points="8,1.5 13.63,4.75 13.63,11.25 8,14.5 2.37,11.25 2.37,4.75"
-              stroke="#C9A84C" stroke-width="1.2" stroke-linejoin="round" fill="none"/>
-            <!-- Vertical bar of the cross -->
-            <line x1="8" y1="4.5" x2="8" y2="11.5" stroke="#C9A84C" stroke-width="1.2" stroke-linecap="round"/>
-            <!-- Horizontal bar of the cross -->
-            <line x1="4.5" y1="8" x2="11.5" y2="8" stroke="#C9A84C" stroke-width="1.2" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <span class="nav-logo-text">Abide <span>Labs</span></span>
+        <img src="./abide-labs-logo.svg" alt="Abide Labs" style="height: 40px; width: auto;">
+        <span class="nav-logo-text">Abide Labs</span>
       </a>
       <a href="#contact" class="nav-link">Contact</a>
     </div>
