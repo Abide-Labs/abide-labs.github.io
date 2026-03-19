@@ -81,12 +81,12 @@ nav.scrolled .nav-logo-text{font-size:1.05rem}
 .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,6.5vw,5.2rem);line-height:1.1;letter-spacing:-.02em;color:var(--cream);font-weight:400;max-width:750px;animation:fadeUp .8s ease .2s both;text-align:center;width:100%}
 .hero h1 em{font-style:italic;background:linear-gradient(135deg,var(--gold-light),var(--gold),var(--gold-dim));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero-sub{font-size:1.05rem;color:var(--gray);line-height:1.75;max-width:440px;margin:1.5rem auto 2.5rem;font-weight:300;letter-spacing:.02em;animation:fadeUp .8s ease .35s both;text-align:center}
-.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;animation:fadeUp .8s ease .5s both;max-width:480px;margin:0 auto}
-.btn-primary{background:var(--gold);color:var(--black);padding:.85rem 0;border-radius:2px;font-size:.82rem;font-weight:600;text-decoration:none;transition:all .35s ease;display:inline-flex;align-items:center;justify-content:center;gap:.6rem;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--gold);flex:1;min-width:180px}
+.hero-actions{display:flex;gap:1rem;justify-content:center;animation:fadeUp .8s ease .5s both;}
+.btn-primary{background:var(--gold);color:var(--black);padding:.85rem 0;border-radius:2px;font-size:.82rem;font-weight:600;text-decoration:none;transition:all .35s ease;display:inline-flex;align-items:center;justify-content:center;gap:.6rem;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--gold);width:210px}
 .btn-primary:hover{background:var(--gold-light);box-shadow:0 0 40px rgba(212,168,75,.2);transform:translateY(-2px)}
 .btn-primary svg{transition:transform .3s}
 .btn-primary:hover svg{transform:translateX(3px)}
-.btn-secondary{background:transparent;color:var(--cream-dim);padding:.85rem 0;border-radius:2px;font-size:.82rem;font-weight:500;text-decoration:none;transition:all .35s ease;border:1px solid var(--gray-light);letter-spacing:.06em;text-transform:uppercase;flex:1;min-width:180px;text-align:center}
+.btn-secondary{background:transparent;color:var(--cream-dim);padding:.85rem 0;border-radius:2px;font-size:.82rem;font-weight:500;text-decoration:none;transition:all .35s ease;border:1px solid var(--gray-light);letter-spacing:.06em;text-transform:uppercase;width:210px;text-align:center}
 .btn-secondary:hover{border-color:var(--gold-dim);color:var(--gold-light);transform:translateY(-2px)}
 .hero-scroll{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);width:max-content;display:flex;flex-direction:column;align-items:center;gap:.5rem;color:var(--gray);font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;animation:fadeUp .8s ease .65s both}
 .hero-scroll .line{width:1px;height:40px;background:var(--gray-light);position:relative;overflow:hidden}
@@ -99,10 +99,10 @@ section{padding:6rem 2rem}
 .section-label{font-size:.68rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:.75rem}
 .section-label::before{content:'';width:28px;height:1px;background:var(--gold)}
 .section-title{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(1.8rem,3.5vw,2.8rem);line-height:1.15;letter-spacing:-.01em;max-width:550px;color:var(--cream)}
-.section-desc{font-size:.95rem;color:var(--gray);line-height:1.75;max-width:480px;margin-top:1rem;font-weight:300}
+.section-desc{font-size:.95rem;color:var(--gray);line-height:1.75;max-width:480px;margin-top:1rem;font-weight:300;text-align:center;margin-left:auto;margin-right:auto}
 
 #apps{background:var(--black)}
-.apps-header{text-align:center;max-width:580px;margin:0 auto 4rem;width:100%}
+.apps-header{text-align:center;max-width:580px;margin:0 auto 4rem}
 .apps-header .section-label{justify-content:center}
 .apps-header .section-label::before{display:none}
 .apps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:1.5rem;max-width:880px;margin:0 auto}
