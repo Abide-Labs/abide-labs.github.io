@@ -85,7 +85,7 @@
     /* ── Hero ── */
     .hero {
       background: var(--navy);
-      padding: 88px 24px 80px;
+      padding: 48px 24px 48px;
       position: relative;
       overflow: hidden;
     }
@@ -122,13 +122,19 @@
       position: relative;
       z-index: 1;
     }
+    .hero-logo {
+      display: block;
+      height: 220px;
+      width: auto;
+      margin-bottom: 28px;
+    }
     .hero-eyebrow {
       font-size: 11px;
       font-weight: 500;
       color: var(--gold);
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      margin-bottom: 18px;
+      margin-bottom: 14px;
       opacity: 0.85;
     }
     .hero-title {
@@ -137,7 +143,7 @@
       color: var(--white);
       line-height: 1.12;
       letter-spacing: -1px;
-      margin-bottom: 22px;
+      margin-bottom: 18px;
     }
     .hero-title span { color: var(--gold); }
     .hero-sub {
@@ -164,7 +170,7 @@
 
     /* ── Section ── */
     section {
-      padding: 64px 24px;
+      padding: 40px 24px;
     }
     section + section {
       padding-top: 0;
@@ -356,8 +362,9 @@
 
     /* ── Mobile ── */
     @media (max-width: 480px) {
-      .hero { padding: 60px 20px 56px; }
-      section { padding: 48px 20px; }
+      .hero { padding: 36px 20px 40px; }
+      .hero-logo { height: 160px; }
+      section { padding: 32px 20px; }
       .contact-card { padding: 28px 22px; }
       .footer-inner { flex-direction: column; align-items: flex-start; }
     }
@@ -369,8 +376,7 @@
   <nav>
     <div class="nav-inner">
       <a href="#" class="nav-logo">
-        <img src="./abide-labs-logo.svg" alt="Abide Labs" style="height: 40px; width: auto;">
-        <span class="nav-logo-text">Abide Labs</span>
+        <img src="./abide-labs-logo.svg" alt="Abide Labs" style="height: 36px; width: auto;">
       </a>
       <a href="#contact" class="nav-link">Contact</a>
     </div>
@@ -380,6 +386,7 @@
   <div class="hero">
     <div class="hero-glow"></div>
     <div class="hero-inner">
+      <img src="./abide-labs-logo.svg" alt="Abide Labs" class="hero-logo">
       <div class="hero-eyebrow">Mobile Software Studio</div>
       <h1 class="hero-title">Software that<br><span>ages well.</span></h1>
       <p class="hero-sub">
