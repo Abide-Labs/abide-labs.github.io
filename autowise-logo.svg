@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" fill="none">
+  <!--
+    Autowise Logo — SVG reconstruction
+    A-shape with road, flat apex, blue crossbar stripe, 3D depth faces
+    Charcoal: #4A5160  Blue: #3FA9DC  Light face: #5E6575  Road: #3D4352
+  -->
+
+  <!-- ── OUTER A SHAPE ── -->
+  <!-- Full A silhouette (clipping shape, filled charcoal) -->
+  <polygon
+    points="197,88 303,88 425,392 345,392 250,158 155,392 75,392"
+    fill="#4A5160"/>
+
+  <!-- ── ROAD CUTOUT (inside the A) ── -->
+  <!-- Road surface — slightly lighter dark, trapezoidal road receding to apex -->
+  <polygon
+    points="250,158 155,392 345,392"
+    fill="#3D4352"/>
+
+  <!-- ── LEFT LEG — inner lighter face (3D depth / light reflection) ── -->
+  <!-- The right-facing surface of the left leg catches light -->
+  <polygon
+    points="250,158 225,158 138,392 155,392"
+    fill="#5D6475"/>
+
+  <!-- ── RIGHT LEG — inner lighter face ── -->
+  <polygon
+    points="250,158 275,158 362,392 345,392"
+    fill="#555B6A"/>
+
+  <!-- ── ROAD CENTERLINE DASHES ── -->
+  <!-- 3 dashes, wide at bottom, narrowing toward apex (perspective) -->
+  <rect x="246" y="316" width="8"  height="32" rx="3" fill="white" opacity="0.9"/>
+  <rect x="247" y="265" width="6"  height="26" rx="2.5" fill="white" opacity="0.9"/>
+  <rect x="248" y="220" width="4"  height="20" rx="2" fill="white" opacity="0.85"/>
+
+  <!-- ── BLUE CROSSBAR STRIPE ── -->
+  <!-- Parallelogram across left leg, acting as the A crossbar -->
+  <polygon
+    points="130,262 228,244 224,268 126,286"
+    fill="#3FA9DC"/>
+
+  <!-- ── FLAT APEX CAP ── -->
+  <!-- The top of the A is a flat horizontal bar -->
+  <rect x="197" y="88" width="106" height="36" rx="2" fill="#4A5160"/>
+</svg>

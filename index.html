@@ -6,20 +6,20 @@
   <title>Abide Labs — Mobile Software</title>
   <meta name="description" content="Abide Labs builds thoughtful mobile software. Based in Oklahoma.">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&display=swap');
 
     :root {
-      --deep:       #0D3D2A;
-      --primary:    #1A7A4A;
-      --mint:       #7FEFB8;
-      --mint-pale:  #D4FAE8;
-      --page:       #F3FAF6;
-      --white:      #ffffff;
-      --t1:         #0D2E1C;
-      --t2:         #3A6B50;
-      --t3:         #7AAD8E;
-      --border:     rgba(26,122,74,0.13);
-      --border-s:   rgba(26,122,74,0.26);
+      --navy:        #0F1B2D;
+      --navy-mid:    #162337;
+      --gold:        #C9A84C;
+      --gold-dim:    rgba(201,168,76,0.15);
+      --gold-glow:   rgba(201,168,76,0.08);
+      --white:       #FFFFFF;
+      --t2:          rgba(255,255,255,0.6);
+      --t3:          rgba(255,255,255,0.35);
+      --card-bg:     rgba(255,255,255,0.04);
+      --card-border: rgba(201,168,76,0.15);
+      --divider:     rgba(201,168,76,0.1);
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -27,8 +27,8 @@
     html { scroll-behavior: smooth; }
 
     body {
-      background: var(--page);
-      color: var(--t1);
+      background: var(--navy);
+      color: var(--white);
       font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       font-weight: 400;
       line-height: 1.6;
@@ -44,9 +44,14 @@
 
     /* ── Nav ── */
     nav {
-      background: var(--white);
-      border-bottom: 0.5px solid var(--border-s);
+      background: rgba(15,27,45,0.92);
+      border-bottom: 0.5px solid var(--divider);
       padding: 0 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
     }
     .nav-inner {
       max-width: 720px;
@@ -65,7 +70,8 @@
     .nav-logo-icon {
       width: 32px;
       height: 32px;
-      background: var(--deep);
+      background: rgba(201,168,76,0.1);
+      border: 0.5px solid var(--card-border);
       border-radius: 8px;
       display: flex;
       align-items: center;
@@ -76,10 +82,10 @@
     .nav-logo-text {
       font-size: 15px;
       font-weight: 500;
-      color: var(--t1);
+      color: var(--white);
       letter-spacing: -0.3px;
     }
-    .nav-logo-text span { color: var(--primary); }
+    .nav-logo-text span { color: var(--gold); }
     .nav-link {
       font-size: 13px;
       font-weight: 500;
@@ -87,31 +93,40 @@
       text-decoration: none;
       transition: color 0.15s;
     }
-    .nav-link:hover { color: var(--primary); }
+    .nav-link:hover { color: var(--gold); }
 
     /* ── Hero ── */
     .hero {
-      background: var(--deep);
-      padding: 80px 24px 72px;
+      background: var(--navy);
+      padding: 88px 24px 80px;
       position: relative;
       overflow: hidden;
     }
     .hero::before {
       content: '';
       position: absolute;
-      width: 480px; height: 480px;
+      width: 560px; height: 560px;
       border-radius: 50%;
-      border: 1px solid rgba(127,239,184,0.08);
-      right: -120px; top: -120px;
+      border: 1px solid var(--gold-glow);
+      right: -160px; top: -160px;
       pointer-events: none;
     }
     .hero::after {
       content: '';
       position: absolute;
-      width: 280px; height: 280px;
+      width: 320px; height: 320px;
       border-radius: 50%;
-      border: 1px solid rgba(127,239,184,0.12);
-      right: -40px; top: -40px;
+      border: 1px solid rgba(201,168,76,0.06);
+      right: -60px; top: -60px;
+      pointer-events: none;
+    }
+    /* Extra radial glow */
+    .hero-glow {
+      position: absolute;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 70%);
+      right: -80px; top: -80px;
       pointer-events: none;
     }
     .hero-inner {
@@ -123,40 +138,42 @@
     .hero-eyebrow {
       font-size: 11px;
       font-weight: 500;
-      color: var(--mint);
-      letter-spacing: 0.1em;
+      color: var(--gold);
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
+      opacity: 0.85;
     }
     .hero-title {
-      font-size: clamp(32px, 5vw, 48px);
+      font-size: clamp(34px, 5.5vw, 52px);
       font-weight: 500;
-      color: #fff;
-      line-height: 1.15;
-      letter-spacing: -0.8px;
-      margin-bottom: 20px;
+      color: var(--white);
+      line-height: 1.12;
+      letter-spacing: -1px;
+      margin-bottom: 22px;
     }
-    .hero-title span { color: var(--mint); }
+    .hero-title span { color: var(--gold); }
     .hero-sub {
       font-size: 16px;
       font-weight: 400;
-      color: rgba(255,255,255,0.55);
-      max-width: 480px;
-      line-height: 1.65;
-      margin-bottom: 32px;
+      color: var(--t2);
+      max-width: 460px;
+      line-height: 1.7;
+      margin-bottom: 36px;
     }
     .hero-cta {
       display: inline-block;
-      background: var(--mint);
-      color: var(--deep);
+      background: var(--gold);
+      color: var(--navy);
       font-size: 13px;
       font-weight: 500;
-      padding: 11px 22px;
+      padding: 11px 24px;
       border-radius: 10px;
       text-decoration: none;
-      transition: opacity 0.15s;
+      letter-spacing: -0.1px;
+      transition: opacity 0.15s, transform 0.15s;
     }
-    .hero-cta:hover { opacity: 0.88; }
+    .hero-cta:hover { opacity: 0.88; transform: translateY(-1px); }
 
     /* ── Section ── */
     section {
@@ -168,15 +185,16 @@
     .section-label {
       font-size: 10px;
       font-weight: 500;
-      color: var(--t3);
-      letter-spacing: 0.1em;
+      color: var(--gold);
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       margin-bottom: 12px;
+      opacity: 0.8;
     }
     .section-title {
       font-size: 22px;
       font-weight: 500;
-      color: var(--t1);
+      color: var(--white);
       letter-spacing: -0.4px;
       margin-bottom: 8px;
     }
@@ -195,37 +213,47 @@
       gap: 16px;
     }
     .app-card {
-      background: var(--white);
-      border: 0.5px solid var(--border-s);
-      border-radius: 14px;
-      padding: 22px;
+      background: var(--card-bg);
+      border: 0.5px solid var(--card-border);
+      border-radius: 16px;
+      padding: 24px;
       text-decoration: none;
-      transition: box-shadow 0.2s, transform 0.2s;
+      transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
     }
     .app-card:hover {
-      box-shadow: 0 6px 24px rgba(13,61,42,0.09);
+      background: rgba(255,255,255,0.07);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3), 0 0 0 1px rgba(201,168,76,0.2);
       transform: translateY(-2px);
     }
     .app-icon {
       width: 48px; height: 48px;
       border-radius: 12px;
       display: flex; align-items: center; justify-content: center;
-      margin-bottom: 14px;
-      font-size: 22px;
+      margin-bottom: 16px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .app-icon img {
+      width: 48px;
+      height: 48px;
+      display: block;
+    }
+    .app-icon img.contain {
+      object-fit: contain;
     }
     .app-name {
       font-size: 15px;
       font-weight: 500;
-      color: var(--t1);
+      color: var(--white);
       letter-spacing: -0.2px;
-      margin-bottom: 5px;
+      margin-bottom: 6px;
     }
-    .app-name span { color: var(--primary); }
+    .app-name span { color: var(--gold); }
     .app-desc {
       font-size: 13px;
       color: var(--t2);
-      line-height: 1.6;
-      margin-bottom: 14px;
+      line-height: 1.65;
+      margin-bottom: 16px;
     }
     .app-status {
       display: inline-block;
@@ -233,74 +261,85 @@
       font-weight: 500;
       padding: 3px 10px;
       border-radius: 20px;
+      letter-spacing: 0.04em;
     }
-    .status-coming { background: var(--mint-pale); color: var(--primary); }
-    .status-beta   { background: #FEF3DC; color: #C97B0A; }
+    .status-coming {
+      background: rgba(201,168,76,0.12);
+      color: var(--gold);
+      border: 0.5px solid rgba(201,168,76,0.25);
+    }
+    .status-beta {
+      background: rgba(255,255,255,0.06);
+      color: var(--t2);
+      border: 0.5px solid rgba(255,255,255,0.12);
+    }
 
     /* ── Values ── */
     .values-divider {
       border: none;
-      border-top: 0.5px solid var(--border);
+      border-top: 0.5px solid var(--divider);
       margin: 0 24px;
     }
     .values-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 24px;
+      gap: 28px;
     }
     .value-item {}
     .value-icon {
-      font-size: 20px;
-      margin-bottom: 10px;
+      font-size: 18px;
+      margin-bottom: 12px;
+      opacity: 0.75;
     }
     .value-name {
       font-size: 13px;
       font-weight: 500;
-      color: var(--t1);
-      margin-bottom: 4px;
+      color: var(--white);
+      margin-bottom: 5px;
     }
     .value-desc {
       font-size: 12px;
       color: var(--t2);
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     /* ── Contact ── */
     .contact-card {
-      background: var(--deep);
+      background: var(--card-bg);
+      border: 0.5px solid var(--card-border);
       border-radius: 16px;
-      padding: 36px 32px;
+      padding: 40px 36px;
       position: relative;
       overflow: hidden;
     }
     .contact-card::before {
       content: '';
       position: absolute;
-      width: 240px; height: 240px;
+      width: 280px; height: 280px;
       border-radius: 50%;
-      border: 1px solid rgba(127,239,184,0.08);
+      background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%);
       right: -60px; bottom: -60px;
       pointer-events: none;
     }
-    .contact-card .section-label { color: var(--mint); opacity: 0.7; }
-    .contact-card .section-title { color: #fff; }
-    .contact-card .section-sub   { color: rgba(255,255,255,0.45); margin-bottom: 20px; }
+    .contact-card .section-label { opacity: 0.9; }
+    .contact-card .section-title { color: var(--white); }
+    .contact-card .section-sub { color: var(--t2); margin-bottom: 22px; }
     .contact-email {
       display: inline-block;
       font-size: 14px;
       font-weight: 500;
-      color: var(--mint);
+      color: var(--gold);
       text-decoration: none;
-      border-bottom: 1px solid rgba(127,239,184,0.3);
+      border-bottom: 1px solid rgba(201,168,76,0.3);
       padding-bottom: 2px;
       transition: border-color 0.15s;
     }
-    .contact-email:hover { border-color: var(--mint); }
+    .contact-email:hover { border-color: var(--gold); }
 
     /* ── Footer ── */
     footer {
-      background: var(--white);
-      border-top: 0.5px solid var(--border);
+      background: rgba(255,255,255,0.02);
+      border-top: 0.5px solid var(--divider);
       padding: 28px 24px;
     }
     .footer-inner {
@@ -326,11 +365,11 @@
       text-decoration: none;
       transition: color 0.15s;
     }
-    .footer-link:hover { color: var(--primary); }
+    .footer-link:hover { color: var(--gold); }
 
     /* ── Mobile ── */
     @media (max-width: 480px) {
-      .hero { padding: 56px 20px 52px; }
+      .hero { padding: 60px 20px 56px; }
       section { padding: 48px 20px; }
       .contact-card { padding: 28px 22px; }
       .footer-inner { flex-direction: column; align-items: flex-start; }
@@ -344,10 +383,16 @@
     <div class="nav-inner">
       <a href="#" class="nav-logo">
         <div class="nav-logo-icon">
-          <!-- Simple A mark -->
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path d="M8 2L14 13H2L8 2Z" stroke="#7FEFB8" stroke-width="1.4" stroke-linejoin="round" fill="none"/>
-            <path d="M5 9.5h6" stroke="#7FEFB8" stroke-width="1.4" stroke-linecap="round"/>
+          <!-- Hexagon with cross/plus negative space — gold stroke, no fill -->
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Pointy-top hexagon, r=6.5 centered at 8,8 -->
+            <polygon
+              points="8,1.5 13.63,4.75 13.63,11.25 8,14.5 2.37,11.25 2.37,4.75"
+              stroke="#C9A84C" stroke-width="1.2" stroke-linejoin="round" fill="none"/>
+            <!-- Vertical bar of the cross -->
+            <line x1="8" y1="4.5" x2="8" y2="11.5" stroke="#C9A84C" stroke-width="1.2" stroke-linecap="round"/>
+            <!-- Horizontal bar of the cross -->
+            <line x1="4.5" y1="8" x2="11.5" y2="8" stroke="#C9A84C" stroke-width="1.2" stroke-linecap="round"/>
           </svg>
         </div>
         <span class="nav-logo-text">Abide <span>Labs</span></span>
@@ -358,6 +403,7 @@
 
   <!-- Hero -->
   <div class="hero">
+    <div class="hero-glow"></div>
     <div class="hero-inner">
       <div class="hero-eyebrow">Mobile Software Studio</div>
       <h1 class="hero-title">Software that<br><span>ages well.</span></h1>
@@ -378,14 +424,18 @@
 
       <div class="apps-grid">
         <div class="app-card">
-          <div class="app-icon" style="background:#D4FAE8;">📡</div>
+          <div class="app-icon" style="border-radius:12px;">
+            <img src="./frugalradar-icon.png" alt="FrugalRadar icon" width="48" height="48" style="border-radius:12px;">
+          </div>
           <div class="app-name">Frugal<span>Radar</span></div>
           <p class="app-desc">Discover deals, grocery sales, and local promotions near you. Price tracking, deal alerts, and receipt scanning — all in one place.</p>
           <span class="app-status status-beta">Coming Soon — iOS &amp; Android</span>
         </div>
 
         <div class="app-card">
-          <div class="app-icon" style="background:#E8F4FD;">🚗</div>
+          <div class="app-icon" style="background:rgba(255,255,255,0.06); border-radius:12px;">
+            <img src="./autowise-logo.svg" alt="Autowise logo" width="48" height="48" class="contain">
+          </div>
           <div class="app-name">Auto<span>wise</span></div>
           <p class="app-desc">Compare vehicles, estimate total ownership costs, and find the right car for your budget. Smart search with finance and trade-in tools.</p>
           <span class="app-status status-coming">In Development</span>
@@ -435,7 +485,7 @@
         <div class="section-label">Contact</div>
         <h2 class="section-title">Get in touch</h2>
         <p class="section-sub">Questions, partnerships, or press inquiries — we read everything.</p>
-        <a href="mailto:abidelabs@proton.me" class="contact-email">abidelabs@proton.me</a>
+        <a href="mailto:abidelabsllc@gmail.com" class="contact-email">abidelabsllc@gmail.com</a>
       </div>
     </div>
   </section>
