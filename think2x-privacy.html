@@ -8,15 +8,14 @@
   <meta name="description" content="Privacy Policy for Think2x, an AI reply coaching app by Abide Labs LLC.">
   <style>
     :root {
-      --navy: #0d1f3c;
-      --navy-2: #122347;
-      --gold: #4A3AB5;
-      --gold-soft: rgba(74, 58, 181, 0.12);
-      --text: #1f2937;
-      --muted: #6b7280;
-      --bg: #f8fafc;
-      --card: #ffffff;
-      --border: #e5e7eb;
+      --bg: #0D0D0F;
+      --bg-2: #1A0533;
+      --accent: #8B5CF6;
+      --accent-soft: rgba(139, 92, 246, 0.12);
+      --text: #E4E4E7;
+      --muted: #9CA3AF;
+      --card: #18181B;
+      --border: #27272A;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -26,7 +25,7 @@
       line-height: 1.7;
     }
     .hero {
-      background: linear-gradient(180deg, var(--navy), var(--navy-2));
+      background: linear-gradient(180deg, var(--bg-2), var(--bg));
       color: white;
       padding: 48px 24px 40px;
     }
@@ -36,8 +35,8 @@
     }
     .eyebrow {
       display: inline-block;
-      color: var(--gold);
-      background: var(--gold-soft);
+      color: var(--accent);
+      background: var(--accent-soft);
       padding: 4px 10px;
       border-radius: 999px;
       font-size: 12px;
@@ -51,7 +50,7 @@
       margin-bottom: 8px;
     }
     .updated {
-      color: rgba(255,255,255,0.78);
+      color: rgba(255,255,255,0.6);
       font-size: 14px;
     }
     .container {
@@ -62,13 +61,13 @@
       border: 1px solid var(--border);
       border-radius: 18px;
       padding: 32px 28px;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
     h2 {
       font-size: 20px;
       margin-top: 28px;
       margin-bottom: 10px;
-      color: var(--navy);
+      color: #F4F4F5;
     }
     p, li {
       font-size: 15px;
@@ -78,7 +77,7 @@
       padding-left: 22px;
       margin-bottom: 14px;
     }
-    a { color: var(--navy); }
+    a { color: var(--accent); }
     .footer {
       margin-top: 32px;
       padding-top: 20px;
@@ -92,8 +91,8 @@
   <header class="hero">
     <div class="hero-inner">
       <div class="eyebrow">Think2x</div>
-      <h1>Privacy Policy — Think2x</h1>
-      <p class="updated">Last updated: April 9, 2026</p>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: April 17, 2026</p>
     </div>
   </header>
 
@@ -102,60 +101,69 @@
       <p>Think2x ("we", "our", or "the app") is operated by Abide Labs LLC. This Privacy Policy explains what information Think2x may collect, how it is used, and what choices you have.</p>
 
       <h2>What Think2x Does</h2>
-      <p>Think2x provides AI reply coaching, reflection, and prayer responses based on situations you describe in your own words.</p>
+      <p>Think2x is an AI reply coaching app that helps you craft thoughtful responses to difficult conversations. You describe or screenshot a conversation, and Think2x generates strategic reply suggestions with outcome labels and confidence scores.</p>
 
-      <h2>Information We May Process</h2>
+      <h2>Information We Process</h2>
       <ul>
-        <li><strong>User-entered reflections or prompts.</strong> When you type what you are going through, that text is processed to generate a relevant verse, reflection, and prayer.</li>
-        <li><strong>Saved content on your device.</strong> If you save verses, prayers, or related content, that information may be stored locally on your device so you can view it later.</li>
-        <li><strong>Purchase and subscription status.</strong> If you subscribe to Think2x Pro, subscription and entitlement status may be processed through Apple and RevenueCat to unlock paid features.</li>
+        <li><strong>Text input you provide.</strong> When you type or paste conversation context, that text is sent to our AI provider (OpenAI) to generate reply suggestions. This text is processed in real time and is not stored on our servers after the response is generated.</li>
+        <li><strong>Locally saved content.</strong> Reply history and saved suggestions are stored locally on your device using AsyncStorage. This data never leaves your device unless you choose to share it.</li>
+        <li><strong>Subscription status.</strong> If you subscribe to Think2x Pro, subscription and entitlement data is managed through Apple and RevenueCat. We receive only your entitlement status — not your payment details.</li>
         <li><strong>Limited technical data.</strong> We may receive limited device or diagnostic information from platform and infrastructure providers to keep the app functioning and improve reliability.</li>
       </ul>
 
-      <h2>What We Do Not Collect</h2>
+      <h2>Data Retention</h2>
       <ul>
-        <li>We do not require you to create an account to use the app.</li>
-        <li>We do not sell your personal information.</li>
-        <li>We do not use cross-app tracking for advertising.</li>
+        <li><strong>Text input:</strong> Processed in real time by OpenAI for reply generation. Not stored on our servers. Subject to <a href="https://openai.com/policies/privacy-policy">OpenAI's data usage policies</a>.</li>
+        <li><strong>Local data:</strong> Stored on your device until you delete it or remove the app.</li>
+        <li><strong>Subscription records:</strong> Retained by Apple and RevenueCat per their respective policies.</li>
       </ul>
 
-      <h2>How Information Is Used</h2>
+      <h2>What We Do Not Do</h2>
       <ul>
-        <li>To generate AI reply coaching, reflections, and prayers.</li>
-        <li>To save content you choose to keep.</li>
-        <li>To manage subscriptions and restore purchases.</li>
-        <li>To maintain app performance, reliability, and security.</li>
+        <li>We do <strong>not</strong> sell, rent, or share your personal information with third parties for advertising or marketing.</li>
+        <li>We do <strong>not</strong> require you to create an account.</li>
+        <li>We do <strong>not</strong> use cross-app tracking or advertising identifiers.</li>
+        <li>We do <strong>not</strong> store your conversation text on our servers.</li>
       </ul>
 
       <h2>Third-Party Services</h2>
-      <p>Think2x may rely on third-party providers for app functionality, hosting, and subscription management, including:</p>
+      <p>Think2x relies on the following third-party providers:</p>
       <ul>
-        <li><strong>Apple App Store</strong> for app distribution and in-app purchases</li>
-        <li><strong>RevenueCat</strong> for subscription and entitlement management</li>
-        <li><strong>Expo</strong> for app infrastructure and build tooling</li>
+        <li><strong>OpenAI</strong> — processes your text input to generate reply suggestions</li>
+        <li><strong>Apple App Store</strong> — app distribution and in-app purchases</li>
+        <li><strong>RevenueCat</strong> — subscription and entitlement management</li>
+        <li><strong>Expo</strong> — app infrastructure and build tooling</li>
       </ul>
-      <p>Please review those providers' policies for their handling of data.</p>
-
-      <h2>Data Retention</h2>
-      <p>Saved content remains available until you remove it or delete the app. Subscription records are retained according to Apple and RevenueCat policies. We may retain limited operational records as needed for support, fraud prevention, or legal compliance.</p>
+      <p>Each provider operates under its own privacy policy. We encourage you to review them.</p>
 
       <h2>Children's Privacy</h2>
-      <p>Think2x is not directed to children under 13, and we do not knowingly collect personal information from children.</p>
+      <p>Think2x is not directed to children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us and we will promptly delete it.</p>
+
+      <h2>California Privacy Rights (CCPA)</h2>
+      <p>If you are a California resident, you have the right to:</p>
+      <ul>
+        <li>Know what personal information we collect and how it is used</li>
+        <li>Request deletion of your personal information</li>
+        <li>Opt out of the sale of personal information (we do not sell your data)</li>
+        <li>Not be discriminated against for exercising your privacy rights</li>
+      </ul>
+      <p>To exercise these rights, contact us at the email below.</p>
 
       <h2>Your Choices</h2>
       <ul>
-        <li>You can remove saved content from within the app or by deleting the app from your device.</li>
-        <li>You can manage or cancel subscriptions through your Apple account settings.</li>
+        <li>You can delete saved replies and history from within the app.</li>
+        <li>You can remove all local data by deleting the app from your device.</li>
+        <li>You can manage or cancel subscriptions through your Apple ID account settings.</li>
       </ul>
 
       <h2>Changes to This Policy</h2>
       <p>We may update this policy from time to time. If we do, the updated version will be posted on this page with a revised date.</p>
 
       <h2>Contact</h2>
-      <p>If you have questions about this Privacy Policy, contact us at <a href="mailto:abidelabsllc@gmail.com">abidelabsllc@gmail.com</a>.</p>
+      <p>If you have questions about this Privacy Policy, contact us at <a href="mailto:abidelabs@proton.me">abidelabs@proton.me</a>.</p>
 
       <div class="footer">
-        © 2026 Abide Labs LLC. All rights reserved.
+        &copy; 2026 Abide Labs LLC. All rights reserved.
       </div>
     </div>
   </main>
