@@ -6,7 +6,7 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Abide Labs — Software that ages well.</title>
+<title>Abide Labs — Workflow Systems That Age Well</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <style>/* devanagari */
 
@@ -671,68 +671,6 @@
     background: #fff; color: #111; border-color: #fff; font-weight: 500;
   }
 
-  /* FrugalRadar mini UI */
-  .fr-ui {
-    padding: 24px 8px 8px; font-size: 6.5px; color: #fff;
-    display: flex; flex-direction: column; gap: 6px; height: 100%;
-  }
-  .fr-ui .top {
-    display: flex; justify-content: space-between;
-    font-size: 5.5px; letter-spacing: 0.18em; text-transform: uppercase;
-    color: rgba(255,255,255,0.5);
-  }
-  .fr-ui .search {
-    border: 1px solid rgba(255,255,255,0.12); border-radius: 100px;
-    padding: 4px 9px; color: rgba(255,255,255,0.5); font-size: 5.5px;
-    display: flex; align-items: center; gap: 5px;
-  }
-  .fr-ui .search::before {
-    content: ""; width: 5px; height: 5px; border-radius: 50%;
-    border: 1px solid rgba(255,255,255,0.5);
-  }
-  .fr-ui .featured {
-    border: 1px solid rgba(255,255,255,0.1); border-radius: 9px;
-    padding: 8px; overflow: hidden;
-    background: linear-gradient(135deg, rgba(255,255,255,0.08), transparent 70%);
-  }
-  .fr-ui .featured .badge {
-    font-size: 5px; letter-spacing: 0.22em; text-transform: uppercase;
-    color: rgba(255,255,255,0.65); margin-bottom: 3px;
-  }
-  .fr-ui .featured .title {
-    font-family: 'Source Serif 4', serif; font-size: 8.5px; line-height: 1.2; font-weight: 400;
-  }
-  .fr-ui .featured .price {
-    margin-top: 5px; display: flex; align-items: baseline; gap: 5px;
-  }
-  .fr-ui .featured .now {
-    color: #fff; font-size: 10px; font-weight: 500;
-    font-family: 'Source Serif 4', serif;
-  }
-  .fr-ui .featured .was {
-    color: rgba(255,255,255,0.4); text-decoration: line-through; font-size: 5.5px;
-  }
-  .fr-ui .section-t {
-    font-size: 5.5px; letter-spacing: 0.2em; text-transform: uppercase;
-    color: rgba(255,255,255,0.5);
-    display: flex; justify-content: space-between;
-  }
-  .fr-ui .trending {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 4px;
-  }
-  .fr-ui .t-item {
-    border: 1px solid rgba(255,255,255,0.08); border-radius: 6px;
-    padding: 5px; display: flex; flex-direction: column; gap: 2px;
-  }
-  .fr-ui .t-item .store {
-    font-size: 4.5px; letter-spacing: 0.18em; color: rgba(255,255,255,0.6);
-    text-transform: uppercase;
-  }
-  .fr-ui .t-item .name { font-size: 5.5px; line-height: 1.3; }
-  .fr-ui .t-item .tdp {
-    font-size: 6px; color: #fff; font-family: 'Source Serif 4', serif;
-  }
-
   .app-meta { display: flex; flex-direction: column; gap: 0.75rem; margin-top: auto; }
   .app-name-row {
     display: flex; align-items: center; justify-content: space-between; gap: 0.75rem;
@@ -786,6 +724,24 @@
   .service-card p {
     margin: 0; font-size: 0.9rem; line-height: 1.6;
     color: rgba(255,255,255,0.65);
+  }
+  .workflow-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.7rem 1.2rem;
+  }
+  .workflow-list li {
+    padding: 0.55rem 0.8rem;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 0.75rem;
+    color: rgba(255,255,255,0.85);
+    font-size: 0.9rem;
+  }
+  @media (min-width: 900px) {
+    .workflow-list { grid-template-columns: 1fr 1fr; }
   }
 
   /* Pipeline */
@@ -855,13 +811,20 @@
     border-radius: 1.5rem; margin: 0 auto;
   }
   .email-link {
-    font-family: 'Source Serif 4', serif; font-style: italic;
-    font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 400; color: #C9A84C;
-    text-decoration: none; border-bottom: 1px solid transparent;
-    padding-bottom: 2px; letter-spacing: -0.01em;
-    transition: border-color 0.25s ease;
+    font-family: 'Poppins', system-ui, sans-serif;
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: #0D1F3C;
+    text-decoration: none;
+    padding: 0.8rem 1.1rem;
+    border-radius: 0.75rem;
+    background: #C9A84C;
+    border: 1px solid rgba(201,168,76,0.85);
+    transition: transform 0.2s ease, filter 0.2s ease;
   }
-  .email-link:hover { border-bottom-color: rgba(201,168,76,0.5); }
+  .email-link:hover { transform: translateY(-1px); filter: brightness(1.03); }
   .email-sub {
     font-size: 0.7rem; letter-spacing: 0.24em; text-transform: uppercase;
     color: rgba(255,255,255,0.5);
@@ -939,10 +902,10 @@
 
           <div class="nav-right">
             <div class="nav-links liquid-glass" style="padding: 0.25rem; border-radius: 999px;">
-              <a class="nav-link" href="#apps">Apps</a>
-              <a class="nav-link" href="#services">Services</a>
-              <a class="nav-link" href="#principles">Principles</a>
-              <a class="nav-link" href="#contact">Contact</a>
+              <a class="nav-link" href="#workflows">Workflows</a>
+              <a class="nav-link" href="#proof">Proof</a>
+              <a class="nav-link" href="#built-by-abide">Built by Abide</a>
+              <a class="nav-link" href="/audit/">Audit</a>
             </div>
           </div>
         </nav>
@@ -953,38 +916,31 @@
           </div>
 
           <h1 class="hero-title">
-            Software that ages <em>well.</em>
+            Workflow systems that age <em>well.</em>
           </h1>
 
           <p class="hero-sub">
-            Abide Labs builds thoughtful mobile applications and practical AI systems.
-            Calm interfaces. Durable software.
+            We help businesses recover missed leads, improve follow-up, handle intake, schedule appointments, and reduce repetitive admin work without forcing them into a bloated software platform.
           </p>
 
           <div class="hero-ctas">
-            <a href="#apps" class="cta liquid-glass-strong">
-              <span>Explore our work</span>
+            <a href="/audit/" class="cta liquid-glass-strong">
+              <span>Book a 15-minute workflow audit</span>
               <span class="cta-icon"><i data-lucide="arrow-up-right"></i></span>
             </a>
-            <a href="#principles" class="cta liquid-glass">
-              <span>Our approach</span>
+            <a href="#workflow-examples" class="cta liquid-glass">
+              <span>See example workflows</span>
             </a>
-          </div>
-
-          <div class="tag-row">
-            <span class="tag liquid-glass">Mobile Development</span>
-            <span class="tag liquid-glass">AI Consulting</span>
-            <span class="tag liquid-glass">iOS &amp; Android</span>
           </div>
         </div>
 
         <div class="quote-block">
-          <div class="quote-label">STUDIO PRINCIPLE</div>
+          <div class="quote-label">CORE LINE</div>
           <p class="quote-text">
-            We build <em>quiet, patient</em> software — the kind that <em>earns</em> a place on the home screen.
+            Abide Labs helps local businesses find workflow leaks and build focused AI systems around them.
           </p>
           <div class="quote-author">
-            <span>EST. 2024 · ABIDE LABS</span>
+            <span>PRACTICAL WORKFLOWS · NO HYPE</span>
           </div>
         </div>
 
@@ -1003,40 +959,27 @@
       </div>
 
       <div class="status-card liquid-glass">
-        <div class="eyebrow"><span class="dot"></span>CURRENTLY</div>
-        <h4>Two live products, three in development</h4>
-        <p>Selectively taking on mobile and AI work for Q3 2026.</p>
+        <div class="eyebrow"><span class="dot"></span>FOCUS</div>
+        <h4>Workflow first. Software second.</h4>
+        <p>We map where calls, follow-up, intake, and admin work are leaking time or leads.</p>
       </div>
 
       <div class="apps-stack liquid-glass">
         <div class="apps-stack-head">
-          <span class="label">Shipped Products</span>
-          <span class="count">02</span>
+          <span class="label">Current workflow focus</span>
         </div>
 
-        <a class="mini-app-row liquid-glass" href="https://apps.apple.com/us/app/nuhra/id6761960472" target="_blank" rel="noopener">
-          <div class="mini-app-icon">
-            <img src="assets/nuhra-icon.png" alt="Nuhra">
+        <a class="mini-app-row liquid-glass" href="/audit/">
+          <div class="mini-app-icon" aria-hidden="true" style="display:grid;place-items:center;">
+            <span style="font-size:0.62rem; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.75);">AI</span>
           </div>
           <div>
-            <p class="mini-app-title">Nuhra <span class="live-chip">Live</span></p>
-            <p class="mini-app-sub">A reflection app for scripture, calm guidance, and guided prayer.</p>
-          </div>
-          <span class="mini-plus"><i data-lucide="arrow-up-right"></i></span>
-        </a>
-
-        <a class="mini-app-row liquid-glass" href="https://apps.apple.com/us/app/frugalradar/id6761203398" target="_blank" rel="noopener">
-          <div class="mini-app-icon">
-            <img src="assets/frugalradar-icon.png" alt="FrugalRadar">
-          </div>
-          <div>
-            <p class="mini-app-title">FrugalRadar <span class="live-chip">Live</span></p>
-            <p class="mini-app-sub">Deals, grocery sales, local finds, and a built-in weekend planner.</p>
+            <p class="mini-app-title">Missed call recovery</p>
+            <p class="mini-app-sub">AI-assisted call handling, lead capture, and follow-up support for local businesses.</p>
           </div>
           <span class="mini-plus"><i data-lucide="arrow-up-right"></i></span>
         </a>
       </div>
-
     </div>
   </div>
 
@@ -1044,151 +987,81 @@
   <div class="scroll-sections">
     <div class="wrap">
 
-      <!-- APPS -->
-      <section id="apps" class="section-panel liquid-glass-strong">
+      <!-- WORKFLOWS -->
+      <section id="workflows" class="section-panel liquid-glass-strong">
         <div class="section-head">
-          <span class="eyebrow">Applications</span>
-          <h2 class="section-title">Purposeful software, <em>shipped.</em></h2>
-        </div>
-
-        <div class="apps-grid">
-          <!-- Nuhra -->
-          <article class="app-card liquid-glass">
-            <div class="app-visual">
-              <div class="screenshot"><img src="assets/nuhra-1.jpg" alt="Nuhra"></div>
-              <div class="screenshot"><img src="assets/nuhra-2.jpg" alt="Nuhra"></div>
-              <div class="screenshot"><img src="assets/nuhra-3.jpg" alt="Nuhra"></div>
-            </div>
-
-            <div class="app-meta">
-              <div class="app-name-row">
-                <h3 class="app-name">Nuhra</h3>
-                <div class="app-tags">
-                  <span class="app-tag live">● Live</span>
-                  <span class="app-tag">iOS</span>
-                  <span class="app-tag" style="opacity:0.5">Android · Coming Soon</span>
-                </div>
-              </div>
-              <p class="app-desc">A reflection app for quiet spiritual support — curated scripture, calm guidance, and guided prayer, without the noise.</p>
-              <a href="https://apps.apple.com/us/app/nuhra/id6761960472" target="_blank" rel="noopener" class="app-cta liquid-glass-strong">
-                <span>Download on the App Store</span>
-                <span class="ic"><i data-lucide="arrow-up-right"></i></span>
-              </a>
-            </div>
-          </article>
-
-          <!-- FrugalRadar -->
-          <article class="app-card liquid-glass">
-            <div class="app-visual">
-              <div class="screenshot"><img src="assets/frugalradar-home.jpg" alt="FrugalRadar home"></div>
-              <div class="screenshot"><img src="assets/frugalradar-weekend.jpg" alt="FrugalRadar weekend planner"></div>
-              <div class="screenshot"><img src="assets/frugalradar-electronics.jpg" alt="FrugalRadar deals"></div>
-            </div>
-
-            <div class="app-meta">
-              <div class="app-name-row">
-                <h3 class="app-name">FrugalRadar</h3>
-                <div class="app-tags">
-                  <span class="app-tag live">● Live</span>
-                  <span class="app-tag">iOS</span>
-                  <span class="app-tag" style="opacity:0.5">Android · Coming Soon</span>
-                </div>
-              </div>
-              <p class="app-desc">Discover deals, grocery sales, and local promotions near you, with price tracking, deal alerts, receipt scanning, and a built-in weekend planner.</p>
-              <a href="https://apps.apple.com/us/app/frugalradar/id6761203398" target="_blank" rel="noopener" class="app-cta liquid-glass-strong">
-                <span>Download on the App Store</span>
-                <span class="ic"><i data-lucide="arrow-up-right"></i></span>
-              </a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- SERVICES -->
-      <section id="services" class="section-panel liquid-glass-strong">
-        <div class="section-head">
-          <span class="eyebrow">Services</span>
-          <h2 class="section-title">Mobile software. <em>Practical AI.</em></h2>
+          <span class="eyebrow">Workflows</span>
+          <h2 class="section-title">Most workflow leaks are ordinary. That is why they are <em>expensive.</em></h2>
         </div>
 
         <div class="services-grid">
           <div class="service-card liquid-glass">
             <span class="service-num">i.</span>
-            <h3>Mobile Software Development</h3>
-            <p>We design and build mobile applications from concept to launch, with a focus on user experience, performance, and code that will still make sense six months later.</p>
+            <h3>Where local teams usually leak</h3>
+            <p>Missed calls that never become appointments. Leads that wait too long for follow-up. Intake details scattered across calls, texts, and notes.</p>
           </div>
           <div class="service-card liquid-glass">
             <span class="service-num">ii.</span>
-            <h3>AI Consulting &amp; Integration</h3>
-            <p>Practical AI integration, without the theater. We help teams identify where AI adds real value, then design and ship systems that are actually useful.</p>
-          </div>
-        </div>
-
-        <div style="display:flex;justify-content:center;margin-top:2rem;">
-          <a href="#contact" class="cta liquid-glass-strong">
-            <span>Let's talk</span>
-            <span class="cta-icon"><i data-lucide="arrow-up-right"></i></span>
-          </a>
-        </div>
-      </section>
-
-      <!-- PIPELINE -->
-      <section id="pipeline" class="section-panel liquid-glass-strong">
-        <div class="section-head">
-          <span class="eyebrow">Pipeline</span>
-          <h2 class="section-title">What's <em>next.</em></h2>
-        </div>
-
-        <div class="pipeline-list">
-          <div class="pipeline-item">
-            <span class="pipeline-num">01</span>
-            <div class="pipeline-body">
-              <h3 class="pipeline-name">Think2x</h3>
-              <p class="pipeline-desc">A thinking companion for clearer decisions, stronger reasoning, and better follow-through.</p>
-            </div>
-            <span class="pipeline-tag">In Development</span>
-          </div>
-          <div class="pipeline-item">
-            <span class="pipeline-num">02</span>
-            <div class="pipeline-body">
-              <h3 class="pipeline-name">GreenPea</h3>
-              <p class="pipeline-desc">Voice AI for dealerships — handling leads, follow-up, and appointment flow without the usual friction.</p>
-            </div>
-            <span class="pipeline-tag">In Development</span>
-          </div>
-          <div class="pipeline-item">
-            <span class="pipeline-num">03</span>
-            <div class="pipeline-body">
-              <h3 class="pipeline-name">Autowise</h3>
-              <p class="pipeline-desc">A calmer way to compare cars, understand real ownership costs, and choose with confidence.</p>
-            </div>
-            <span class="pipeline-tag">In Development</span>
+            <h3>What that creates downstream</h3>
+            <p>After-hours inquiries going cold before morning, and staff spending hours on repetitive admin work that should be handled by a better process.</p>
           </div>
         </div>
       </section>
 
-      <!-- PRINCIPLES -->
-      <section id="principles" class="section-panel liquid-glass-strong">
+      <!-- WORKFLOW EXAMPLES -->
+      <section id="workflow-examples" class="section-panel liquid-glass-strong">
         <div class="section-head">
-          <span class="eyebrow">Principles</span>
-          <h2 class="section-title">How we <em>build.</em></h2>
+          <span class="eyebrow">Workflow Examples</span>
+          <h2 class="section-title">AI systems for the workflows your team already <em>runs.</em></h2>
         </div>
 
-        <div class="principles-grid">
-          <div class="principle liquid-glass">
-            <span class="principle-num">01 — Simplicity</span>
-            <h3>Remove before you add.</h3>
-            <p>Clean, focused design over feature bloat. Every pixel, every line of code — intentional.</p>
+        <div class="service-card liquid-glass" style="max-width:980px;margin:0 auto;">
+          <ul class="workflow-list">
+            <li>Missed call recovery</li>
+            <li>Lead follow-up</li>
+            <li>Appointment scheduling</li>
+            <li>Customer intake</li>
+            <li>CRM note summaries</li>
+            <li>Review follow-up</li>
+            <li>Stale lead reactivation</li>
+            <li>Email and SMS response drafts</li>
+            <li>Internal admin automation</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- PROOF -->
+      <section id="proof" class="section-panel liquid-glass-strong">
+        <div class="section-head">
+          <span class="eyebrow">Proof</span>
+          <h2 class="section-title">AI phone workflow for dealership lead handling</h2>
+        </div>
+
+        <div class="service-card liquid-glass" style="max-width:980px;margin:0 auto;">
+          <p style="margin:0; line-height:1.75; color:#dbe1ec;">
+            We recently built an AI phone workflow for dealership lead handling: answering calls, capturing lead details, supporting follow-up, and helping move customers toward appointments.
+          </p>
+        </div>
+      </section>
+
+      <!-- BUILT BY ABIDE -->
+      <section id="built-by-abide" class="section-panel liquid-glass-strong">
+        <div class="section-head">
+          <span class="eyebrow">Built by Abide Labs</span>
+          <h2 class="section-title">Small products, practical systems</h2>
+        </div>
+        <p class="contact-body" style="max-width:760px; margin: -0.8rem 0 1.6rem; text-align:left;">
+          Alongside client workflow systems, we build small focused products. This keeps our work close to real product decisions, disciplined execution, and practical user experience.
+        </p>
+
+        <div class="services-grid">
+          <div class="service-card liquid-glass">
+            <h3>Nuhra</h3>
+            <p>A focused reflection app built around structured thought, clarity, and small daily decisions.</p>
           </div>
-          <div class="principle liquid-glass">
-            <span class="principle-num">02 — Durability</span>
-            <h3>Built for years, not months.</h3>
-            <p>Software should age well. Stable architectures over trendy frameworks — we write code we'd want to inherit.</p>
-          </div>
-          <div class="principle liquid-glass">
-            <span class="principle-num">03 — Clarity</span>
-            <h3>Honest by default.</h3>
-            <p>Clear interfaces, readable code, and honest communication. No dark patterns, no noise. Privacy and respect are non-negotiable.</p>
+          <div class="service-card liquid-glass">
+            <h3>Think2x</h3>
+            <p>A decision-support tool for slowing down important choices, comparing tradeoffs, and thinking with more structure.</p>
           </div>
         </div>
       </section>
@@ -1196,15 +1069,15 @@
       <!-- CONTACT -->
       <section id="contact" class="section-panel liquid-glass-strong contact-panel">
         <div class="section-head">
-          <span class="eyebrow">Contact</span>
-          <h2 class="section-title">Let's build something <em>together.</em></h2>
+          <span class="eyebrow">Audit</span>
+          <h2 class="section-title">Book a 15-minute workflow audit</h2>
         </div>
         <p class="contact-body">
-          Questions about our products, a potential engagement, or a thoughtful idea worth exploring? We read everything.
+          We'll review one repetitive workflow and identify 2–3 practical places AI could save time, recover leads, or reduce admin work.
         </p>
         <div class="email-wrap liquid-glass">
-          <a href="mailto:hello@abide-labs.com" class="email-link">hello@abide-labs.com</a>
-          <span class="email-sub">Usually respond within 24 hours</span>
+          <a href="/audit/" class="email-link">Request workflow audit</a>
+          <span class="email-sub">Or email hello@abide-labs.com</span>
         </div>
       </section>
 

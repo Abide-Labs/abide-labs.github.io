@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abide Labs — Workflow Audit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:'Poppins',system-ui,sans-serif; color:#fff; background:linear-gradient(180deg,#0D1F3C 0%,#08162C 100%); }
+    .wrap { max-width: 920px; margin: 0 auto; padding: 2rem 1.25rem 3rem; }
+    .panel { border-radius:1rem; padding:1.35rem; background:rgba(255,255,255,0.04); backdrop-filter:blur(12px); border:1px solid rgba(255,255,255,.14); }
+    h1 { margin:0 0 .75rem; font-family:'Source Serif 4',serif; font-size:clamp(1.8rem,4vw,2.6rem); }
+    h2 { font-size:1.05rem; margin:1.2rem 0 .6rem; }
+    p, li { font-size: 1rem; }
+    p { color:#d7dbe4; line-height:1.65; margin:.35rem 0; }
+    ul { color:#e5e8ef; line-height:1.7; margin:.4rem 0 0; }
+    .top { margin-bottom:1.2rem; display:flex; justify-content:space-between; align-items:center; }
+    .top a { color:#fff; text-decoration:none; }
+    .brand-mark { display:flex; align-items:center; gap:.6rem; }
+    .logo-wordmark { height:42px; width:auto; display:block; }
+    .brand-text { font-size:1.02rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:#F8F9FA; }
+    .actions { display:flex; flex-wrap:wrap; gap:.75rem; align-items:center; margin-top:1rem; }
+    .cta { display:inline-block; text-decoration:none; color:#0D1F3C; background:#C9A84C; font-weight:600; padding:.82rem 1.12rem; border-radius:.72rem; border:1px solid rgba(201,168,76,.9); }
+    .secondary { color:#fff; background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.18); cursor:pointer; font-family:inherit; font-size:1rem; }
+    .help { margin-top:.75rem; color:#c7cfdd; }
+    .email { color:#fff; font-weight:600; }
+    .template { margin-top:.9rem; padding:.9rem; border-radius:.75rem; background:rgba(0,0,0,.18); border:1px solid rgba(255,255,255,.12); color:#d7dbe4; white-space:pre-wrap; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.88rem; line-height:1.55; }
+    @media (max-width:700px){ .logo-wordmark{height:34px;} .brand-text{font-size:.9rem;} }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <a href="/" class="brand-mark"><img src="/logo-full.png" alt="Abide Labs" class="logo-wordmark" /><span class="brand-text">Abide Labs</span></a>
+      <a href="/">Back to home</a>
+    </div>
+
+    <section class="panel">
+      <h1>Book a 15-minute AI Workflow Audit</h1>
+      <p>We’ll review one repetitive workflow in your business and identify 2–3 practical places AI could save time, recover leads, or reduce admin work.</p>
+
+      <h2>What the audit covers</h2>
+      <ul>
+        <li>Where leads, calls, or requests currently enter the business</li>
+        <li>Where follow-up slows down or breaks</li>
+        <li>Which repetitive admin tasks consume staff time</li>
+        <li>Which workflow would be the best first candidate for AI assistance</li>
+        <li>What a focused 2–4 week implementation sprint could look like</li>
+      </ul>
+
+      <h2>Who it is for</h2>
+      <p>Local business teams dealing with missed calls, delayed follow-up, messy intake, after-hours inquiries, or repetitive admin load.</p>
+
+      <h2>How to request it</h2>
+      <div class="actions">
+        <a class="cta" href="mailto:hello@abide-labs.com?subject=Workflow%20Audit%20Request&body=Business%20name%3A%0AWebsite%3A%0AWhat%20workflow%20do%20you%20want%20to%20improve%3A%0APreferred%20contact%20method%3A">Request workflow audit</a>
+        <button class="cta secondary" type="button" id="copy-request">Copy request email</button>
+      </div>
+      <p class="help">If the button does not open your email app, send the request manually to <span class="email">hello@abide-labs.com</span>.</p>
+      <div class="template" id="request-template">To: hello@abide-labs.com
+Subject: Workflow Audit Request
+
+Business name:
+Website:
+What workflow do you want to improve:
+Preferred contact method:</div>
+    </section>
+  </div>
+  <script>
+    const copyButton = document.getElementById('copy-request');
+    const requestTemplate = document.getElementById('request-template');
+
+    copyButton?.addEventListener('click', async () => {
+      const originalText = copyButton.textContent;
+      try {
+        await navigator.clipboard.writeText(requestTemplate.textContent.trim());
+        copyButton.textContent = 'Copied';
+      } catch (error) {
+        copyButton.textContent = 'Copy unavailable';
+      }
+      window.setTimeout(() => {
+        copyButton.textContent = originalText;
+      }, 1800);
+    });
+  </script>
+</body>
+</html>
