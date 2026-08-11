@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://abide-labs.com/sitemap.xml
