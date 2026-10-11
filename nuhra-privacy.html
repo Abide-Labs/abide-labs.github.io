@@ -106,7 +106,7 @@
 
       <h2>Information We May Process</h2>
       <ul>
-        <li><strong>User-entered reflections or prompts.</strong> When you type what you are going through, that text is processed to generate a relevant verse, reflection, and prayer.</li>
+        <li><strong>User-entered reflections or prompts.</strong> When you agree to use AI guidance or prayer, Nuhra sends your personal situation text and relevant context, such as verse references and themes, to OpenAI through Cloudflare to generate the response. Before the first AI request, the app asks you to agree to this sharing. Your choice is remembered on your device. You may cancel and continue viewing saved verses.</li>
         <li><strong>Saved content on your device.</strong> If you save verses, prayers, or related content, that information may be stored locally on your device so you can view it later.</li>
         <li><strong>Purchase and subscription status.</strong> If you subscribe to Nuhra Pro, subscription and entitlement status may be processed through Apple, Google Play, and RevenueCat to unlock paid features.</li>
         <li><strong>Limited technical data.</strong> We may receive limited device or diagnostic information from platform and infrastructure providers to keep the app functioning and improve reliability.</li>
@@ -133,11 +133,14 @@
         <li><strong>App Store and Google Play</strong> for app distribution and in-app purchases</li>
         <li><strong>RevenueCat</strong> for subscription and entitlement management</li>
         <li><strong>Expo</strong> for app infrastructure and build tooling</li>
+        <li><strong>OpenAI</strong> for generating AI guidance and prayers.</li>
+        <li><strong>Cloudflare</strong> for hosting the service that securely forwards these requests and verifies access.</li>
       </ul>
       <p>Please review those providers' policies for their handling of data.</p>
 
       <h2>Data Retention</h2>
       <p>Saved content remains available until you remove it or delete the app. Subscription records are retained according to App Store, Google Play, and RevenueCat policies. We may retain limited operational records as needed for support, fraud prevention, or legal compliance.</p>
+      <p>Nuhra’s service database does not save your prompt text or AI response text. OpenAI may retain prompts and responses under its API data policies, including abuse monitoring. Its standard policy allows up to 30 days, with exceptions for legal or safety needs. Technical installation-verification and usage records are stored through Cloudflare to protect the service; installation-verification records have no automatic expiration. Deleting the app does not automatically remove these server records. Contact dev@abide-labs.com for privacy questions.</p>
 
       <h2>Children's Privacy</h2>
       <p>Nuhra is not directed to children under 13, and we do not knowingly collect personal information from children.</p>
