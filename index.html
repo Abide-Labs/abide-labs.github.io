@@ -1,1136 +1,237 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
-
-<meta charset="UTF-8">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Abide Labs — Practical AI Workflow Systems for Local Businesses</title>
-<meta name="description" content="Abide Labs designs practical AI workflow systems for local businesses—improving missed-call recovery, lead follow-up, intake, and repetitive admin work.">
-<meta name="robots" content="index,follow">
-<meta name="theme-color" content="#0D1F3C">
+<title>Abide Labs | AI Product Development &amp; Workflow Systems</title>
+<meta name="description" content="Abide Labs develops AI-powered products, workflow systems, and creative production tools. Explore BellRinger, AI Video Studio, and projects in development.">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#0F1B2D">
 <link rel="canonical" href="https://abide-labs.com/">
+<link rel="icon" href="/assets/brand/mark.webp" type="image/webp">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Abide Labs">
-<meta property="og:title" content="Practical AI Workflow Systems for Local Businesses | Abide Labs">
-<meta property="og:description" content="Practical AI workflow systems for missed-call recovery, lead follow-up, intake, and repetitive admin work.">
+<meta property="og:title" content="Abide Labs | AI Product Development &amp; Workflow Systems">
+<meta property="og:description" content="Abide Labs develops AI-powered products, workflow systems, and creative production tools. Explore BellRinger, AI Video Studio, and projects in development.">
 <meta property="og:url" content="https://abide-labs.com/">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Practical AI Workflow Systems for Local Businesses | Abide Labs">
-<meta name="twitter:description" content="Practical AI workflow systems for missed-call recovery, lead follow-up, intake, and repetitive admin work.">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Abide Labs",
-  "url": "https://abide-labs.com/",
-  "description": "Abide Labs designs practical AI workflow systems for local businesses.",
-  "email": "hello@abide-labs.com",
-  "sameAs": [
-    "https://www.facebook.com/share/1Gj1g2FWXS/?mibextid=wwXIfr",
-    "https://www.linkedin.com/company/abide-labs/",
-    "https://x.com/abidelabs"
-  ]
-}
+<meta property="og:image" content="https://abide-labs.com/assets/social-share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Abide Labs. AI products and systems, built with purpose.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Abide Labs | AI Product Development &amp; Workflow Systems">
+<meta name="twitter:description" content="Abide Labs develops AI-powered products, workflow systems, and creative production tools. Explore BellRinger, AI Video Studio, and projects in development.">
+<meta name="twitter:image" content="https://abide-labs.com/assets/social-share.jpg">
+<link rel="stylesheet" href="/assets/site.css">
+<script defer src="/assets/site.js">
 </script>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<style>/* devanagari */
-
-/* latin-ext */
-
-/* latin */
-
-/* devanagari */
-
-/* latin-ext */
-
-/* latin */
-
-/* devanagari */
-
-/* latin-ext */
-
-/* latin */
-
-/* devanagari */
-
-/* latin-ext */
-
-/* latin */
-
-/* devanagari */
-
-/* latin-ext */
-
-/* latin */
-
-/* cyrillic-ext */
-
-/* cyrillic */
-
-/* greek */
-
-/* vietnamese */
-
-/* latin-ext */
-
-/* latin */
-
-/* cyrillic-ext */
-
-/* cyrillic */
-
-/* greek */
-
-/* vietnamese */
-
-/* latin-ext */
-
-/* latin */
-
-/* cyrillic-ext */
-
-/* cyrillic */
-
-/* greek */
-
-/* vietnamese */
-
-/* latin-ext */
-
-/* latin */
-
-</style>
-<script src="assets/bundle.js"></script>
-
-<style>
-  :root {
-    --radius: 1rem;
-  }
-  * { box-sizing: border-box; }
-  html, body {
-    margin: 0;
-    padding: 0;
-    background: #000;
-    font-family: 'Poppins', system-ui, sans-serif;
-    color: #fff;
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
-
-  /* Video background — tinted toward brand navy + gold */
-  .bg-video {
-    position: fixed;
-    inset: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    z-index: 2;
-    filter: saturate(0.55) contrast(1.08) brightness(0.85) hue-rotate(190deg);
-    mix-blend-mode: screen;
-  }
-  .bg-video-fallback {
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    background:
-      radial-gradient(ellipse at 25% 30%, #16284B 0%, transparent 55%),
-      radial-gradient(ellipse at 78% 72%, rgba(201,168,76,0.18) 0%, transparent 55%),
-      linear-gradient(180deg, #0D1F3C 0%, #08162C 100%);
-  }
-  /* Navy colour wash over the video — mix-blend pushes mid-tones deep navy */
-  .bg-tint {
-    position: fixed;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
-    background: #0D1F3C;
-    mix-blend-mode: color;
-    opacity: 0.7;
-  }
-  /* Gold accent glow — removed per request */
-  .bg-accent { display: none; }
-  /* Floating gold particles / motes */
-  .bg-motes {
-    position: fixed;
-    inset: 0;
-    z-index: 2;
-    pointer-events: none;
-    overflow: hidden;
-  }
-  .bg-motes i {
-    position: absolute;
-    display: block;
-    width: 3px; height: 3px;
-    border-radius: 50%;
-    background: #C9A84C;
-    box-shadow: 0 0 8px 1px rgba(201,168,76,0.75);
-    opacity: 0.7;
-    animation: mote-drift 14s linear infinite;
-  }
-  .bg-motes i:nth-child(1) { left: 8%;  top: 78%; animation-delay: 0s;  animation-duration: 16s; }
-  .bg-motes i:nth-child(2) { left: 22%; top: 62%; animation-delay: -4s; animation-duration: 18s; width:2px;height:2px; }
-  .bg-motes i:nth-child(3) { left: 38%; top: 85%; animation-delay: -7s; animation-duration: 20s; }
-  .bg-motes i:nth-child(4) { left: 54%; top: 70%; animation-delay: -2s; animation-duration: 15s; width:4px;height:4px; }
-  .bg-motes i:nth-child(5) { left: 67%; top: 82%; animation-delay: -9s; animation-duration: 22s; width:2px;height:2px;}
-  .bg-motes i:nth-child(6) { left: 82%; top: 66%; animation-delay: -5s; animation-duration: 17s; }
-  .bg-motes i:nth-child(7) { left: 91%; top: 78%; animation-delay: -11s; animation-duration: 19s; width:2px;height:2px;}
-  .bg-motes i:nth-child(8) { left: 15%; top: 45%; animation-delay: -13s; animation-duration: 24s; width:2px;height:2px; opacity:0.5;}
-  .bg-motes i:nth-child(9) { left: 76%; top: 38%; animation-delay: -6s; animation-duration: 21s; width:2px;height:2px; opacity:0.55;}
-  @keyframes mote-drift {
-    0%   { transform: translate(0, 0) scale(1);   opacity: 0; }
-    10%  { opacity: 0.85; }
-    50%  { transform: translate(-14px, -70px) scale(1.1); opacity: 0.9; }
-    90%  { opacity: 0.6; }
-    100% { transform: translate(6px, -140px) scale(0.9);  opacity: 0; }
-  }
-  /* Subtle circuitry layer — geometric grid + nodes evoking 'futuristic roots' */
-  /* Motherboard circuitry layer — tile pattern, BEHIND the video */
-  .bg-circuit, .bg-nodes, .bg-pulses { display: none; }
-  .bg-board {
-    position: fixed;
-    inset: 0;
-    z-index: 1;           /* behind the video (video is z-index 2) */
-    pointer-events: none;
-    opacity: 0.6;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='480' height='480' viewBox='0 0 480 480'><g fill='none' stroke='%23C9A84C' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' stroke-opacity='0.85'><path d='M -10 80 L 120 80 L 160 120 L 280 120 L 320 80 L 490 80'/><path d='M -10 300 L 100 300 L 140 260 L 260 260 L 300 300 L 420 300 L 490 300'/><path d='M 60 -10 L 60 140 L 100 180 L 100 340 L 60 380 L 60 490'/><path d='M 360 -10 L 360 120 L 400 160 L 400 320 L 360 360 L 360 490'/><path d='M 200 200 L 200 380 L 240 420 L 380 420'/><path d='M 220 -10 L 220 40 L 260 80'/></g><g fill='%23C9A84C' fill-opacity='0.9'><circle cx='120' cy='80' r='2.6'/><circle cx='280' cy='120' r='2.6'/><circle cx='100' cy='180' r='2.6'/><circle cx='260' cy='260' r='2.6'/><circle cx='420' cy='300' r='2.6'/><circle cx='60' cy='140' r='2.6'/><circle cx='360' cy='120' r='2.6'/><circle cx='400' cy='320' r='2.6'/><circle cx='200' cy='380' r='2.6'/><circle cx='380' cy='420' r='2.6'/><circle cx='220' cy='40' r='2.6'/></g></svg>");
-    background-size: 480px 480px;
-    background-repeat: repeat;
-    mask-image: radial-gradient(ellipse at 50% 55%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.65) 60%, transparent 100%);
-    -webkit-mask-image: radial-gradient(ellipse at 50% 55%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.65) 60%, transparent 100%);
-  }
-  /* SVG pulse overlay — also behind the video */
-  .bg-board-svg {
-    position: fixed;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
-    opacity: 0.9;
-    mask-image: radial-gradient(ellipse at 50% 55%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 60%, transparent 100%);
-    -webkit-mask-image: radial-gradient(ellipse at 50% 55%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 60%, transparent 100%);
-  }
-  .bg-board-svg svg { width:100%; height:100%; display:block; }
-  .bg-board-svg .pulse {
-    fill: none;
-    stroke: #FFE29A;
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    filter: drop-shadow(0 0 4px rgba(255, 226, 154, 0.9));
-    pathLength: 1000;
-    stroke-dasharray: 90 1000;
-    animation: trace-flow linear infinite;
-  }
-  @keyframes trace-flow {
-    0%   { stroke-dashoffset: 1000; }
-    100% { stroke-dashoffset: 0; }
-  }
-  .vignette {
-    position: fixed;
-    inset: 0;
-    z-index: 3;
-    pointer-events: none;
-    background:
-      radial-gradient(ellipse at center, transparent 35%, rgba(8,18,40,0.55) 100%);
-  }
-
-  /* ==== Liquid glass layer ==== */
-  .liquid-glass {
-    background: rgba(255,255,255,0.01);
-    background-blend-mode: luminosity;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border: none;
-    box-shadow: inset 0 1px 1px rgba(255,255,255,0.10);
-    position: relative;
-    overflow: hidden;
-  }
-  .liquid-glass::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    padding: 1.4px;
-    border-radius: inherit;
-    background: linear-gradient(180deg,
-      rgba(255,255,255,0.45) 0%,
-      rgba(255,255,255,0.15) 20%,
-      transparent 40%,
-      transparent 60%,
-      rgba(255,255,255,0.15) 80%,
-      rgba(255,255,255,0.45) 100%);
-    -webkit-mask:
-      linear-gradient(#000 0 0) content-box,
-      linear-gradient(#000 0 0);
-    mask:
-      linear-gradient(#000 0 0) content-box,
-      linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    pointer-events: none;
-  }
-
-  .liquid-glass-strong {
-    background: rgba(255,255,255,0.01);
-    background-blend-mode: luminosity;
-    backdrop-filter: blur(50px) saturate(1.2);
-    -webkit-backdrop-filter: blur(50px) saturate(1.2);
-    border: none;
-    box-shadow:
-      4px 4px 4px rgba(0,0,0,0.05),
-      inset 0 1px 1px rgba(255,255,255,0.15);
-    position: relative;
-    overflow: hidden;
-  }
-  .liquid-glass-strong::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    padding: 1.4px;
-    border-radius: inherit;
-    background: linear-gradient(180deg,
-      rgba(255,255,255,0.50) 0%,
-      rgba(255,255,255,0.20) 20%,
-      transparent 40%,
-      transparent 60%,
-      rgba(255,255,255,0.20) 80%,
-      rgba(255,255,255,0.50) 100%);
-    -webkit-mask:
-      linear-gradient(#000 0 0) content-box,
-      linear-gradient(#000 0 0);
-    mask:
-      linear-gradient(#000 0 0) content-box,
-      linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    pointer-events: none;
-  }
-
-  /* ============== LAYOUT ============== */
-  .stage {
-    position: relative;
-    z-index: 10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  @media (min-width: 1024px) {
-    .stage.hero-stage { flex-direction: row; min-height: 100vh; }
-  }
-
-  .left-panel {
-    width: 100%;
-    position: relative;
-    padding: 1rem;
-    display: flex;
-  }
-  .right-panel { display: none; }
-
-  @media (min-width: 1024px) {
-    .left-panel { width: 52%; padding: 1.5rem; }
-    .right-panel {
-      display: flex;
-      flex-direction: column;
-      width: 48%;
-      padding: 1.5rem 1.5rem 1.5rem 0;
-      gap: 1rem;
-    }
-  }
-
-  .left-overlay {
-    position: relative;
-    flex: 1;
-    border-radius: 1.75rem;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    min-height: calc(100vh - 2rem);
-  }
-  @media (min-width: 1024px) {
-    .left-overlay { min-height: calc(100vh - 3rem); padding: 2.25rem; }
-  }
-
-  /* Nav */
-  .nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-  }
-  .logo { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; }
-  .logo-wordmark {
-    height: clamp(44px, 5.5vw, 72px); width: auto;
-  }
-  .nav-right { display: flex; align-items: center; gap: 0.5rem; margin-right: 0.5rem; }
-  .nav-links {
-    display: none;
-    gap: 0.35rem;
-  }
-  @media (min-width: 820px) {
-    .nav-links { display: flex; }
-  }
-  .nav-link {
-    padding: 0.5rem 0.95rem;
-    border-radius: 999px;
-    font-size: 0.8rem;
-    color: rgba(255,255,255,0.82);
-    transition: color 0.2s ease, transform 0.2s ease;
-    text-decoration: none;
-  }
-  .nav-link:hover { color: #fff; transform: scale(1.03); }
-
-  .pill {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    padding: 0.55rem 1rem; border-radius: 999px;
-    color: rgba(255,255,255,0.85);
-    font-size: 0.82rem; font-weight: 400; cursor: pointer;
-    transition: transform 0.2s ease; white-space: nowrap;
-  }
-  .pill:hover { transform: scale(1.05); }
-  .pill svg { width: 15px; height: 15px; }
-
-  /* Hero center */
-  .hero {
-    flex: 1;
-    display: flex; flex-direction: column;
-    align-items: flex-start; justify-content: center;
-    padding: 2rem 0; max-width: 640px;
-  }
-  .hero-mark {
-    width: 88px; height: 88px; border-radius: 20px;
-    display: grid; place-items: center; margin-bottom: 1.5rem;
-  }
-  .hero-mark svg { width: 34px; height: 34px; color: #fff; }
-
-  h1.hero-title {
-    font-size: clamp(2.5rem, 5.5vw, 4.6rem);
-    line-height: 1; letter-spacing: -0.05em;
-    font-weight: 500; margin: 0 0 1.5rem; color: #fff; text-wrap: balance;
-  }
-  h1.hero-title em {
-    font-family: 'Source Serif 4', serif; font-style: italic;
-    color: #C9A84C; font-weight: 400;
-  }
-  .hero-sub {
-    font-size: 1rem; line-height: 1.6;
-    color: rgba(255,255,255,0.7); margin: 0 0 2rem; max-width: 32em;
-  }
-
-  .hero-ctas {
-    display: flex; align-items: center; gap: 0.75rem;
-    margin-bottom: 1.75rem; flex-wrap: wrap;
-  }
-  .cta {
-    display: inline-flex; align-items: center; gap: 0.65rem;
-    padding: 0.55rem 0.6rem 0.55rem 1.25rem;
-    border-radius: 999px; color: #fff; font-size: 0.95rem;
-    font-weight: 500; cursor: pointer; text-decoration: none;
-    transition: transform 0.2s ease; border: 0;
-  }
-  .cta:hover { transform: scale(1.05); }
-  .cta-icon {
-    width: 28px; height: 28px; border-radius: 999px;
-    background: rgba(255,255,255,0.15);
-    display: grid; place-items: center;
-  }
-  .cta-icon svg { width: 14px; height: 14px; color: #fff; }
-
-  .tag-row { display: flex; gap: 0.5rem; flex-wrap: wrap; }
-  .tag {
-    padding: 0.4rem 0.9rem; border-radius: 999px;
-    font-size: 0.72rem; color: rgba(255,255,255,0.8); letter-spacing: 0.01em;
-  }
-
-  /* Bottom quote */
-  .quote-block { margin-top: auto; max-width: 540px; }
-  .quote-label {
-    font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
-    color: rgba(255,255,255,0.5); margin-bottom: 0.9rem;
-  }
-  .quote-text {
-    font-size: 1.35rem; line-height: 1.35;
-    color: rgba(255,255,255,0.92); letter-spacing: -0.015em;
-    margin-bottom: 1.2rem; font-weight: 300;
-  }
-  .quote-text em {
-    font-family: 'Source Serif 4', serif; font-style: italic;
-    color: #C9A84C; font-weight: 400;
-  }
-  .quote-author {
-    display: flex; align-items: center; gap: 0.75rem;
-    font-size: 0.7rem; letter-spacing: 0.22em;
-    color: rgba(255,255,255,0.6); text-transform: uppercase;
-  }
-  .quote-author::before, .quote-author::after {
-    content: ""; flex: 1; height: 1px;
-    background: rgba(255,255,255,0.2); max-width: 120px;
-  }
-
-  /* ============== RIGHT PANEL (hero) ============== */
-  .right-top {
-    display: flex; align-items: center; justify-content: space-between; gap: 0.75rem;
-  }
-  .socials-pill {
-    display: flex; align-items: center; gap: 0.35rem;
-    padding: 0.45rem 0.6rem 0.45rem 0.9rem; border-radius: 999px;
-  }
-  .socials-pill a {
-    width: 30px; height: 30px; border-radius: 999px;
-    display: grid; place-items: center; color: #fff;
-    transition: color 0.2s ease, transform 0.2s ease;
-  }
-  .socials-pill a:hover { color: rgba(255,255,255,0.8); transform: scale(1.05); }
-  .socials-pill a svg { width: 14px; height: 14px; display: block; }
-  .socials-arrow {
-    width: 30px; height: 30px; border-radius: 999px;
-    display: grid; place-items: center;
-    background: rgba(255,255,255,0.1); color: #fff;
-  }
-  .socials-arrow svg { width: 13px; height: 13px; }
-
-  .account-btn {
-    display: inline-flex; align-items: center; gap: 0.55rem;
-    padding: 0.5rem 1rem 0.5rem 0.55rem; border-radius: 999px;
-    color: #fff; font-size: 0.82rem; cursor: pointer; text-decoration: none;
-    transition: transform 0.2s ease;
-  }
-  .account-btn:hover { transform: scale(1.05); }
-  .account-btn-icon {
-    width: 30px; height: 30px; border-radius: 999px;
-    background: rgba(255,255,255,0.1);
-    display: grid; place-items: center;
-  }
-  .account-btn-icon svg { width: 14px; height: 14px; }
-
-  .status-card {
-    width: 240px; align-self: flex-end;
-    padding: 1rem 1.1rem; border-radius: var(--radius); margin-top: 0.5rem;
-  }
-  .status-card .eyebrow {
-    font-size: 0.64rem; letter-spacing: 0.2em; text-transform: uppercase;
-    color: rgba(255,255,255,0.5); margin-bottom: 0.45rem;
-    display: flex; align-items: center; gap: 0.5rem;
-  }
-  .status-card .dot {
-    width: 6px; height: 6px; border-radius: 50%;
-    background: #7CFFB2; box-shadow: 0 0 8px #7CFFB2;
-  }
-  .status-card h4 {
-    margin: 0 0 0.35rem; font-weight: 500; font-size: 0.98rem;
-    letter-spacing: -0.015em; color: #fff;
-  }
-  .status-card p {
-    margin: 0; font-size: 0.72rem; line-height: 1.45;
-    color: rgba(255,255,255,0.6);
-  }
-
-  /* Live apps stack (right panel bottom) */
-  .apps-stack {
-    margin-top: auto; padding: 0.85rem;
-    border-radius: 2.5rem; display: flex; flex-direction: column; gap: 0.75rem;
-  }
-  .apps-stack-head {
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 0.4rem 0.5rem 0.1rem;
-  }
-  .apps-stack-head .label {
-    font-size: 0.62rem; letter-spacing: 0.24em; text-transform: uppercase;
-    color: rgba(255,255,255,0.5);
-  }
-  .apps-stack-head .count {
-    font-family: 'Source Serif 4', serif; font-style: italic;
-    font-size: 0.82rem; color: #C9A84C;
-  }
-
-  .mini-app-row {
-    padding: 0.85rem; border-radius: 1.5rem;
-    display: grid; grid-template-columns: 44px 1fr auto;
-    gap: 0.9rem; align-items: center;
-    color: inherit; text-decoration: none;
-    transition: transform 0.2s ease;
-  }
-  .mini-app-row:hover { transform: translateY(-1px); }
-  .mini-app-icon {
-    width: 44px; height: 44px; border-radius: 12px;
-    overflow: hidden; flex-shrink: 0;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.08);
-  }
-  .mini-app-icon img {
-    width: 100%; height: 100%; object-fit: cover;
-    border-radius: 12px;
-  }
-  .mini-app-title {
-    margin: 0 0 0.2rem; font-size: 0.98rem; font-weight: 500;
-    letter-spacing: -0.015em; color: #fff;
-    display: flex; align-items: center; gap: 0.5rem;
-  }
-  .mini-app-title .live-chip {
-    font-size: 0.56rem; letter-spacing: 0.2em; text-transform: uppercase;
-    color: #7CFFB2; padding: 0.15rem 0.45rem;
-    border: 1px solid rgba(124,255,178,0.35); border-radius: 999px;
-  }
-  .mini-app-sub {
-    margin: 0; font-size: 0.72rem; line-height: 1.45;
-    color: rgba(255,255,255,0.6);
-  }
-  .mini-plus {
-    width: 34px; height: 34px; border-radius: 999px;
-    display: grid; place-items: center; color: #fff;
-  }
-  .mini-plus svg { width: 14px; height: 14px; }
-
-  /* ============== SCROLL SECTIONS ============== */
-  .scroll-sections {
-    position: relative; z-index: 10;
-    padding: 4rem 1.5rem 2rem;
-  }
-  .wrap {
-    max-width: 1240px; margin: 0 auto;
-  }
-  .section-panel {
-    border-radius: 1.75rem; padding: 2.5rem;
-    margin-bottom: 1.25rem;
-  }
-  @media (min-width: 860px) {
-    .section-panel { padding: 3.25rem; }
-  }
-  .section-head {
-    display: flex; flex-direction: column; gap: 0.9rem;
-    margin-bottom: 2.5rem; max-width: 720px;
-  }
-  .eyebrow {
-    font-size: 0.68rem; letter-spacing: 0.26em; text-transform: uppercase;
-    color: rgba(255,255,255,0.55); font-weight: 400;
-    display: inline-flex; align-items: center; gap: 0.7rem;
-  }
-  .eyebrow::before {
-    content: ""; width: 22px; height: 1px; background: rgba(255,255,255,0.4);
-  }
-  h2.section-title {
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 500; letter-spacing: -0.04em; line-height: 1.04;
-    margin: 0; color: #fff; text-wrap: balance;
-  }
-  h2.section-title em {
-    font-family: 'Source Serif 4', serif; font-style: italic;
-    color: #C9A84C; font-weight: 400;
-  }
-
-  /* Apps */
-  .apps-grid {
-    display: grid; grid-template-columns: 1fr; gap: 1rem;
-  }
-  @media (min-width: 820px) {
-    .apps-grid { grid-template-columns: 1fr 1fr; gap: 1.25rem; }
-  }
-  .app-card {
-    padding: 1.5rem; border-radius: 1.5rem;
-    display: flex; flex-direction: column; gap: 1.25rem;
-    min-height: 420px;
-  }
-  .app-visual {
-    position: relative; border-radius: 1.1rem; overflow: hidden;
-    aspect-ratio: 16 / 10;
-    display: flex; align-items: center; justify-content: center; gap: 0.75rem;
-    padding: 1rem 1.25rem;
-    background: #0a0a0a;
-  }
-  .app-visual::after {
-    content: ""; position: absolute; inset: 0;
-    box-shadow: inset 0 1px 1px rgba(255,255,255,0.12);
-    border-radius: inherit; pointer-events: none;
-  }
-  .app-visual .screenshot {
-    flex: 1; height: 100%; max-width: 30%;
-    border-radius: 14px; overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.12);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-    position: relative; z-index: 1;
-    background: #111;
-  }
-  .app-visual .screenshot img {
-    width: 100%; height: 100%; object-fit: contain;
-    display: block;
-  }
-
-  /* Nuhra mini UI */
-  .nuhra-ui {
-    padding: 24px 10px 8px; color: #fff; font-family: 'Poppins', sans-serif;
-    font-size: 7px; height: 100%; display: flex; flex-direction: column; gap: 7px;
-  }
-  .nuhra-ui .top {
-    display: flex; justify-content: space-between;
-    font-size: 6px; letter-spacing: 0.18em; text-transform: uppercase;
-    color: rgba(255,255,255,0.5); padding: 0 2px;
-  }
-  .nuhra-ui .greet {
-    font-family: 'Source Serif 4', serif; font-size: 11px; line-height: 1.25;
-    padding: 0 2px; margin-top: 2px; font-weight: 400;
-  }
-  .nuhra-ui .greet em { color: rgba(255,255,255,0.7); font-style: italic; }
-  .nuhra-ui .card {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 7px; padding: 8px; display: flex; flex-direction: column; gap: 4px;
-  }
-  .nuhra-ui .verse-label {
-    font-size: 5.5px; letter-spacing: 0.22em; text-transform: uppercase;
-    color: rgba(255,255,255,0.55);
-  }
-  .nuhra-ui .verse {
-    font-family: 'Source Serif 4', serif; font-style: italic;
-    font-size: 8.5px; line-height: 1.4; color: #fff;
-  }
-  .nuhra-ui .verse-ref {
-    font-size: 6px; color: rgba(255,255,255,0.5); letter-spacing: 0.14em;
-  }
-  .nuhra-ui .actions {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 5px; margin-top: auto;
-  }
-  .nuhra-ui .actpill {
-    padding: 6px; text-align: center;
-    border: 1px solid rgba(255,255,255,0.12); border-radius: 100px;
-    font-size: 6px; letter-spacing: 0.14em; text-transform: uppercase;
-    color: rgba(255,255,255,0.7);
-  }
-  .nuhra-ui .actpill.primary {
-    background: #fff; color: #111; border-color: #fff; font-weight: 500;
-  }
-
-  .app-meta { display: flex; flex-direction: column; gap: 0.75rem; margin-top: auto; }
-  .app-name-row {
-    display: flex; align-items: center; justify-content: space-between; gap: 0.75rem;
-  }
-  .app-name {
-    font-size: 1.35rem; font-weight: 500; letter-spacing: -0.025em; margin: 0;
-  }
-  .app-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; }
-  .app-tag {
-    font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase;
-    color: rgba(255,255,255,0.65); padding: 0.3rem 0.65rem;
-    border: 1px solid rgba(255,255,255,0.15); border-radius: 999px;
-  }
-  .app-tag.live { color: #7CFFB2; border-color: rgba(124,255,178,0.35); }
-  .app-desc {
-    margin: 0; font-size: 0.85rem; line-height: 1.55;
-    color: rgba(255,255,255,0.68);
-  }
-  .app-cta {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    align-self: flex-start; padding: 0.5rem 0.55rem 0.5rem 1.1rem;
-    border-radius: 999px; font-size: 0.82rem; color: #fff;
-    text-decoration: none; transition: transform 0.2s ease;
-  }
-  .app-cta:hover { transform: scale(1.03); }
-  .app-cta .ic {
-    width: 26px; height: 26px; border-radius: 999px;
-    background: rgba(255,255,255,0.12);
-    display: grid; place-items: center;
-  }
-  .app-cta .ic svg { width: 13px; height: 13px; }
-
-  /* Services */
-  .services-grid {
-    display: grid; grid-template-columns: 1fr; gap: 1rem;
-  }
-  @media (min-width: 820px) {
-    .services-grid { grid-template-columns: 1fr 1fr; gap: 1.25rem; }
-  }
-  .service-card {
-    padding: 2rem; border-radius: 1.5rem;
-    display: flex; flex-direction: column; gap: 1rem;
-  }
-  .service-num {
-    font-family: 'Source Serif 4', serif; font-style: italic;
-    color: #C9A84C; font-size: 0.85rem; letter-spacing: 0.08em;
-  }
-  .service-card h3 {
-    margin: 0; font-size: 1.3rem; font-weight: 500; letter-spacing: -0.02em;
-  }
-  .service-card p {
-    margin: 0; font-size: 0.9rem; line-height: 1.6;
-    color: rgba(255,255,255,0.65);
-  }
-  .workflow-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.7rem 1.2rem;
-  }
-  .workflow-list li {
-    padding: 0.55rem 0.8rem;
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 0.75rem;
-    color: rgba(255,255,255,0.85);
-    font-size: 0.9rem;
-  }
-  @media (min-width: 900px) {
-    .workflow-list { grid-template-columns: 1fr 1fr; }
-  }
-
-  /* Pipeline */
-  .pipeline-list {
-    display: flex; flex-direction: column;
-    border-top: 1px solid rgba(255,255,255,0.1);
-  }
-  .pipeline-item {
-    display: grid; grid-template-columns: auto 1fr auto;
-    gap: 1.5rem; align-items: center;
-    padding: 1.5rem 0.25rem;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    transition: padding 0.3s ease;
-  }
-  .pipeline-item:hover { padding-left: 1rem; padding-right: 1rem; }
-  .pipeline-num {
-    font-family: 'Source Serif 4', serif; font-style: italic;
-    color: #C9A84C; font-size: 0.8rem; min-width: 36px;
-  }
-  .pipeline-body { display: flex; flex-direction: column; gap: 0.3rem; max-width: 640px; }
-  .pipeline-name {
-    font-size: clamp(1.3rem, 2vw, 1.65rem);
-    font-weight: 500; letter-spacing: -0.02em; margin: 0;
-  }
-  .pipeline-desc { margin: 0; font-size: 0.88rem; line-height: 1.5; color: rgba(255,255,255,0.6); }
-  .pipeline-tag {
-    font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase;
-    color: rgba(255,255,255,0.6);
-    padding: 0.4rem 0.8rem; border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 999px; white-space: nowrap;
-  }
-  @media (max-width: 640px) {
-    .pipeline-item { grid-template-columns: 1fr; gap: 0.4rem; }
-    .pipeline-tag { justify-self: flex-start; margin-top: 0.4rem; }
-  }
-
-  /* Principles */
-  .principles-grid {
-    display: grid; grid-template-columns: 1fr; gap: 1.25rem;
-  }
-  @media (min-width: 820px) {
-    .principles-grid { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-  }
-  .principle {
-    padding: 1.75rem; border-radius: 1.5rem;
-    display: flex; flex-direction: column; gap: 0.6rem;
-  }
-  .principle-num {
-    font-family: 'Source Serif 4', serif; font-style: italic;
-    color: #C9A84C; font-size: 0.78rem; letter-spacing: 0.1em;
-    padding-bottom: 0.85rem; margin-bottom: 0.3rem;
-    border-bottom: 1px solid rgba(255,255,255,0.12);
-  }
-  .principle h3 { margin: 0; font-size: 1.2rem; font-weight: 500; letter-spacing: -0.02em; }
-  .principle p { margin: 0; font-size: 0.85rem; line-height: 1.6; color: rgba(255,255,255,0.65); }
-
-  /* Contact */
-  .contact-panel { text-align: center; }
-  .contact-panel .section-head { margin-left: auto; margin-right: auto; align-items: center; text-align: center; }
-  .contact-body {
-    max-width: 460px; margin: -0.5rem auto 2rem;
-    color: rgba(255,255,255,0.68); font-size: 0.95rem; line-height: 1.6;
-  }
-  .email-wrap {
-    display: inline-flex; flex-direction: column; align-items: center;
-    gap: 0.75rem; padding: 1.75rem 2.5rem;
-    border-radius: 1.5rem; margin: 0 auto;
-  }
-  .email-link {
-    font-family: 'Poppins', system-ui, sans-serif;
-    font-style: normal;
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 0.01em;
-    color: #0D1F3C;
-    text-decoration: none;
-    padding: 0.8rem 1.1rem;
-    border-radius: 0.75rem;
-    background: #C9A84C;
-    border: 1px solid rgba(201,168,76,0.85);
-    transition: transform 0.2s ease, filter 0.2s ease;
-  }
-  .email-link:hover { transform: translateY(-1px); filter: brightness(1.03); }
-  .email-sub {
-    font-size: 0.7rem; letter-spacing: 0.24em; text-transform: uppercase;
-    color: rgba(255,255,255,0.5);
-  }
-
-  /* Footer */
-  .site-footer {
-    position: relative; z-index: 10;
-    padding: 2rem 3rem; margin: 0 1.5rem 1.5rem;
-    border-radius: 1.5rem;
-    display: flex; align-items: center; justify-content: space-between;
-    flex-wrap: wrap; gap: 1rem;
-    font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
-    color: rgba(255,255,255,0.55);
-  }
-  .site-footer a {
-    color: rgba(255,255,255,0.55); text-decoration: none;
-    transition: color 0.2s ease;
-  }
-  .site-footer a:hover { color: #fff; }
-  .footer-links { display: flex; gap: 1.5rem; }
-
-  /* ambient motion so the glass reads even when video fails */
-  @keyframes drift {
-    0%, 100% { transform: translate(0,0); }
-    50% { transform: translate(2%, -1%); }
-  }
-  .bg-video-fallback { animation: drift 18s ease-in-out infinite; }
-
-  @media (max-width: 1023px) {
-    .left-panel { min-height: 100vh; }
-  }
-  ::selection { background: rgba(255,255,255,0.25); color: #fff; }
-</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://abide-labs.com/#organization","name":"Abide Labs","url":"https://abide-labs.com/","email":"hello@abide-labs.com","logo":"https://abide-labs.com/logo-icon.png","description":"Independent development of AI-powered products, workflow systems, and creative production tools."},{"@type":"WebSite","@id":"https://abide-labs.com/#website","name":"Abide Labs","url":"https://abide-labs.com/","publisher":{"@id":"https://abide-labs.com/#organization"}},{"@type":"WebPage","@id":"https://abide-labs.com/#webpage","url":"https://abide-labs.com/","name":"Abide Labs | AI Product Development & Workflow Systems","description":"Abide Labs develops AI-powered products, workflow systems, and creative production tools. Explore BellRinger, AI Video Studio, and projects in development.","isPartOf":{"@id":"https://abide-labs.com/#website"},"about":{"@id":"https://abide-labs.com/#organization"}}]}</script>
 </head>
 <body>
-
-  <!-- Full-bleed looping video (brand-tinted via CSS layers) -->
-  <div class="bg-video-fallback" aria-hidden="true"></div>
-  <video class="bg-video" autoplay="" muted="" loop="" playsinline="" preload="auto" aria-hidden="true">
-    <source src="assets/hero.mp4" type="video/mp4">
-  </video>
-  <div class="bg-tint" aria-hidden="true"></div>
-  <div class="bg-board" aria-hidden="true"></div>
-  <div class="bg-board-svg" aria-hidden="true">
-    <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-      <path class="pulse" d="M -40 180 L 400 180 L 460 240 L 900 240 L 960 180 L 1400 180 L 1460 240 L 1960 240" pathLength="1000" style="animation-duration:14s; animation-delay:-0s;"></path>
-      <path class="pulse" d="M -40 540 L 360 540 L 420 480 L 860 480 L 920 540 L 1320 540 L 1380 480 L 1960 480" pathLength="1000" style="animation-duration:17s; animation-delay:-2.1s;"></path>
-      <path class="pulse" d="M -40 860 L 340 860 L 400 800 L 820 800 L 880 860 L 1300 860 L 1360 800 L 1960 800" pathLength="1000" style="animation-duration:19s; animation-delay:-4.2s;"></path>
-      <path class="pulse" d="M 240 -40 L 240 260 L 300 320 L 300 640 L 240 700 L 240 1120" pathLength="1000" style="animation-duration:15s; animation-delay:-6.300000000000001s;"></path>
-      <path class="pulse" d="M 960 -40 L 960 300 L 1020 360 L 1020 680 L 960 740 L 960 1120" pathLength="1000" style="animation-duration:13s; animation-delay:-8.4s;"></path>
-      <path class="pulse" d="M 1680 -40 L 1680 260 L 1620 320 L 1620 640 L 1680 700 L 1680 1120" pathLength="1000" style="animation-duration:16s; animation-delay:-10.5s;"></path>
-    </svg>
-  </div>
-  <div class="bg-pulses" aria-hidden="true"></div>
-  <div class="bg-accent" aria-hidden="true"></div>
-  <div class="bg-circuit" aria-hidden="true"></div>
-  <div class="bg-nodes" aria-hidden="true"></div>
-  <div class="bg-motes" aria-hidden="true">
-    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-  </div>
-  <div class="vignette" aria-hidden="true"></div>
-
-  <!-- ============= HERO STAGE ============= -->
-  <div class="stage hero-stage">
-
-    <!-- LEFT PANEL -->
-    <div class="left-panel">
-      <div class="left-overlay liquid-glass-strong">
-
-        <nav class="nav">
-          <a href="#top" class="logo">
-            <img src="wordmark-nav.png" alt="Abide Labs" class="logo-wordmark">
-          </a>
-
-          <div class="nav-right">
-            <div class="nav-links liquid-glass" style="padding: 0.25rem; border-radius: 999px;">
-              <a class="nav-link" href="#workflows">Workflows</a>
-              <a class="nav-link" href="#proof">Proof</a>
-              <a class="nav-link" href="#built-by-abide">Built by Abide</a>
-              <a class="nav-link" href="/audit/">Audit</a>
-            </div>
-          </div>
-        </nav>
-
-        <div class="hero">
-          <div class="hero-mark">
-            <img src="logo-icon.png" alt="" style="width: 72px; height: 72px;">
-          </div>
-
-          <h1 class="hero-title">
-            Workflow systems that age <em>well.</em>
-          </h1>
-
-          <p class="hero-sub">
-            We help businesses recover missed leads, improve follow-up, handle intake, schedule appointments, and reduce repetitive admin work without forcing them into a bloated software platform.
-          </p>
-
-          <div class="hero-ctas">
-            <a href="/audit/" class="cta liquid-glass-strong">
-              <span>Book a 15-minute workflow audit</span>
-              <span class="cta-icon"><i data-lucide="arrow-up-right"></i></span>
-            </a>
-            <a href="#workflow-examples" class="cta liquid-glass">
-              <span>See example workflows</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="quote-block">
-          <div class="quote-label">CORE LINE</div>
-          <p class="quote-text">
-            Abide Labs helps local businesses find workflow leaks and build focused AI systems around them.
-          </p>
-          <div class="quote-author">
-            <span>PRACTICAL WORKFLOWS · NO HYPE</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- RIGHT PANEL -->
-    <div class="right-panel">
-
-      <div class="right-top">
-
-        <a href="mailto:hello@abide-labs.com" class="account-btn liquid-glass">
-          <span class="account-btn-icon"><i data-lucide="mail"></i></span>
-          <span>hello@abide-labs.com</span>
-        </a>
-      </div>
-
-      <div class="status-card liquid-glass">
-        <div class="eyebrow"><span class="dot"></span>FOCUS</div>
-        <h4>Workflow first. Software second.</h4>
-        <p>We map where calls, follow-up, intake, and admin work are leaking time or leads.</p>
-      </div>
-
-      <div class="apps-stack liquid-glass">
-        <div class="apps-stack-head">
-          <span class="label">Current workflow focus</span>
-        </div>
-
-        <a class="mini-app-row liquid-glass" href="/audit/">
-          <div class="mini-app-icon" aria-hidden="true" style="display:grid;place-items:center;">
-            <span style="font-size:0.62rem; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.75);">AI</span>
-          </div>
-          <div>
-            <p class="mini-app-title">Missed call recovery</p>
-            <p class="mini-app-sub">AI-assisted call handling, lead capture, and follow-up support for local businesses.</p>
-          </div>
-          <span class="mini-plus"><i data-lucide="arrow-up-right"></i></span>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ============= SCROLL SECTIONS ============= -->
-  <div class="scroll-sections">
-    <div class="wrap">
-
-      <!-- WORKFLOWS -->
-      <section id="workflows" class="section-panel liquid-glass-strong">
-        <div class="section-head">
-          <span class="eyebrow">Workflows</span>
-          <h2 class="section-title">Most workflow leaks are ordinary. That is why they are <em>expensive.</em></h2>
-        </div>
-
-        <div class="services-grid">
-          <div class="service-card liquid-glass">
-            <span class="service-num">i.</span>
-            <h3>Where local teams usually leak</h3>
-            <p>Missed calls that never become appointments. Leads that wait too long for follow-up. Intake details scattered across calls, texts, and notes.</p>
-          </div>
-          <div class="service-card liquid-glass">
-            <span class="service-num">ii.</span>
-            <h3>What that creates downstream</h3>
-            <p>After-hours inquiries going cold before morning, and staff spending hours on repetitive admin work that should be handled by a better process.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- WORKFLOW EXAMPLES -->
-      <section id="workflow-examples" class="section-panel liquid-glass-strong">
-        <div class="section-head">
-          <span class="eyebrow">Workflow Examples</span>
-          <h2 class="section-title">AI systems for the workflows your team already <em>runs.</em></h2>
-        </div>
-
-        <div class="service-card liquid-glass" style="max-width:980px;margin:0 auto;">
-          <ul class="workflow-list">
-            <li>Missed call recovery</li>
-            <li>Lead follow-up</li>
-            <li>Appointment scheduling</li>
-            <li>Customer intake</li>
-            <li>CRM note summaries</li>
-            <li>Review follow-up</li>
-            <li>Stale lead reactivation</li>
-            <li>Email and SMS response drafts</li>
-            <li>Internal admin automation</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- PROOF -->
-      <section id="proof" class="section-panel liquid-glass-strong">
-        <div class="section-head">
-          <span class="eyebrow">Proof</span>
-          <h2 class="section-title">BellRingerAI for dealership lead handling</h2>
-        </div>
-
-        <div class="service-card liquid-glass" style="max-width:980px;margin:0 auto;">
-          <p style="margin:0; line-height:1.75; color:#dbe1ec;">
-            <a href="https://bellringerai.com/" style="color:#f0c36a;">BellRingerAI</a> is an Abide Labs dealership voice workflow in development for a controlled pilot, focused on approved inbound sales intake and clear human handoffs.
-          </p>
-        </div>
-      </section>
-
-      <!-- BUILT BY ABIDE -->
-      <section id="built-by-abide" class="section-panel liquid-glass-strong">
-        <div class="section-head">
-          <span class="eyebrow">Built by Abide Labs</span>
-          <h2 class="section-title">Small products, practical systems</h2>
-        </div>
-        <p class="contact-body" style="max-width:760px; margin: -0.8rem 0 1.6rem; text-align:left;">
-          Alongside client workflow systems, we build small focused products. This keeps our work close to real product decisions, disciplined execution, and practical user experience.
-        </p>
-
-        <div class="services-grid">
-          <div class="service-card liquid-glass">
-            <h3>Nuhra</h3>
-            <p>A focused reflection app built around structured thought, clarity, and small daily decisions.</p>
-          </div>
-          <div class="service-card liquid-glass">
-            <h3>Think2x</h3>
-            <p>A decision-support tool for slowing down important choices, comparing tradeoffs, and thinking with more structure.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section id="contact" class="section-panel liquid-glass-strong contact-panel">
-        <div class="section-head">
-          <span class="eyebrow">Audit</span>
-          <h2 class="section-title">Book a 15-minute workflow audit</h2>
-        </div>
-        <p class="contact-body">
-          We'll review one repetitive workflow and identify 2–3 practical places AI could save time, recover leads, or reduce admin work.
-        </p>
-        <div class="email-wrap liquid-glass">
-          <a href="/audit/" class="email-link">Request workflow audit</a>
-          <span class="email-sub">Or email hello@abide-labs.com</span>
-        </div>
-      </section>
-
-    </div>
-  </div>
-
-  <footer class="site-footer liquid-glass">
-    <span>© 2026 Abide Labs. All rights reserved.</span>
-    <div class="footer-links">
-      <a href="https://www.facebook.com/share/1Gj1g2FWXS/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a>
-      <a href="https://www.linkedin.com/company/abide-labs/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://x.com/abidelabs" target="_blank" rel="noopener">X</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-      <a href="support.html">Support</a>
-    </div>
-  </footer>
-
-<script>
-  lucide.createIcons();
-  const v = document.querySelector('.bg-video');
-  if (v) {
-    v.addEventListener('error', () => { v.style.display = 'none'; });
-    v.play().catch(() => {});
-  }
-</script>
-
-
-</body></html>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="container nav-wrap">
+<a class="brand" href="/" aria-label="Abide Labs home">
+<img src="/assets/brand/wordmark.webp" width="440" height="59" alt="Abide">
+<small>LABS</small>
+</a>
+<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+<nav class="nav-links" id="primary-nav" aria-label="Main navigation">
+<a href="/projects/">Projects</a>
+<a href="/capabilities/">Capabilities</a>
+<a href="/#about">About</a>
+<a href="/contact/" class="nav-contact">Get in touch</a>
+</nav>
+</div>
+</header>
+<main id="main">
+<section class="hero" aria-labelledby="hero-title">
+<div class="hero-media" aria-hidden="true">
+<img src="/assets/hero-poster.webp" alt="" width="960" height="960" fetchpriority="high">
+<video id="brand-film" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1">
+</video>
+</div>
+<div class="hero-shade">
+</div>
+<div class="container hero-content">
+<p class="eyebrow">Abide Labs / Independent AI product development</p>
+<h1 id="hero-title">AI products and systems,<em>built with purpose.</em>
+</h1>
+<p class="hero-copy">We develop AI-powered software for business workflows and creative production, alongside experiments in how people explore stories and find useful information.</p>
+<div class="actions">
+<a class="button" href="/projects/">Explore our work <span class="arrow" aria-hidden="true">↗</span>
+</a>
+<a class="text-link" href="/contact/">Discuss a project</a>
+</div>
+</div>
+<div class="container hero-bottom">
+<span class="hero-note">From focused prototypes<br>to systems people can use.</span>
+<button hidden id="motion-toggle" class="motion-button" type="button" aria-pressed="false" aria-controls="brand-film">Play background video</button>
+</div>
+</section>
+<section class="intro-strip">
+<div class="container intro-inner">
+<p class="eyebrow">A product-led practice</p>
+<p>Useful software starts with understanding the work. Our own products give us a place to test ideas, examine limitations, and carry what we learn into the next build.</p>
+</div>
+</section>
+<section class="section" id="projects"><span id="proof" class="legacy-anchor"></span><span id="built-by-abide" class="legacy-anchor"></span><span id="top"></span>
+<div class="container">
+<div class="section-head">
+<div>
+<p class="eyebrow">Selected work</p>
+<h2>A closer look<br>at our work.</h2>
+</div>
+<p>Projects at different stages, with a clear account of what each one is being built to do.</p>
+</div>
+<article class="project-feature">
+<figure class="project-visual" aria-label="BellRinger intended workflow">
+<div class="diagram-heading">BellRinger / Workflow under development</div>
+<ol class="flow">
+<li>
+<span>01</span>Sales inquiry</li>
+<li>
+<span>02</span>Capture context</li>
+<li>
+<span>03</span>Approved next step</li>
+<li>
+<span>04</span>Staff handoff</li>
+</ol>
+<figcaption class="diagram-caption">Intended workflow. Pilot readiness is evaluated separately.</figcaption>
+</figure>
+<div class="project-copy">
+<div class="project-meta">
+<span>Voice workflows</span>
+<span>In development</span>
+</div>
+<h3>BellRinger</h3>
+<p>A dealership voice system being developed around sales inquiries, lead information, and clear handoffs to dealership staff. The current focus is preparation for a controlled pilot.</p>
+<a class="text-link" href="/projects/bellringer/">Explore BellRinger <span aria-hidden="true">↗</span>
+</a>
+</div>
+</article>
+<article class="project-feature reverse">
+<figure class="project-visual" aria-label="Video Studio supervised production workflow">
+<div class="diagram-heading">AI Video Studio / Supervised production</div>
+<div class="studio-flow">
+<div>
+<small>01</small>Script &amp; narration</div>
+<div>
+<small>02</small>Presenter &amp; B-roll</div>
+<div>
+<small>03</small>Timeline &amp; captions</div>
+<div>
+<small>04</small>Review &amp; export</div>
+</div>
+<figcaption class="diagram-caption">A workflow map, with human review before final approval.</figcaption>
+</figure>
+<div class="project-copy">
+<div class="project-meta">
+<span>Creative production</span>
+<span>Internal working tools</span>
+</div>
+<h3>AI Video Studio</h3>
+<p>Tools for organizing scripts, narration, fictional presenters, B-roll, captions, and video assembly. Development focuses on a supervised workflow that keeps revisions and review decisions connected.</p>
+<a class="text-link" href="/projects/video-studio/">Inside the production workflow <span aria-hidden="true">↗</span>
+</a>
+</div>
+</article>
+<div class="actions">
+<a class="text-link" href="/projects/">View the project portfolio <span aria-hidden="true">↗</span>
+</a>
+</div>
+</div>
+</section>
+<section class="section paper" id="workflows">
+<span id="workflow-examples" class="legacy-anchor">
+</span>
+<div class="container cap-layout">
+<div class="cap-intro">
+<p class="eyebrow">Capabilities</p>
+<h2>The engineering<br>behind useful AI.</h2>
+<p>Models are one part of a working product. The surrounding software determines what it can do, how it recovers, and when a person needs to step in.</p>
+<a class="text-link" href="/capabilities/">How we build <span aria-hidden="true">↗</span>
+</a>
+</div>
+<div class="cap-list">
+<div class="cap-row">
+<h3>AI applications &amp; workflow automation</h3>
+<p>Product interfaces, structured information, and defined next steps for work such as intake, follow-up, and content preparation.</p>
+</div>
+<div class="cap-row">
+<h3>Agent coordination &amp; human review</h3>
+<p>Bounded tasks, recorded handoffs, and explicit review points. We distinguish a requested action from a verified result.</p>
+</div>
+<div class="cap-row">
+<h3>Generative media production</h3>
+<p>Audio, images, and video connected through versioned assets, editorial tools, and supervised production workflows.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="about">
+<div class="container principles">
+<div>
+<p class="eyebrow">About Abide Labs</p>
+<h2>Engineering informed<br>by the work.</h2>
+<p>Abide Labs is an independent technology company developing its own products and exploring practical applications of AI. Our work connects software engineering with the details of how people actually use a system.</p>
+<p>We are building toward more useful AI applications and more dependable ways to coordinate them. That means testing a small, meaningful use case before expanding its scope.</p>
+</div>
+<ol class="principle-list">
+<li>
+<span>01</span>
+<div>Understand the work before changing it.</div>
+</li>
+<li>
+<span>02</span>
+<div>Build the smallest useful system.</div>
+</li>
+<li>
+<span>03</span>
+<div>Keep people in control of consequential decisions.</div>
+</li>
+<li>
+<span>04</span>
+<div>Only claim what the evidence supports.</div>
+</li>
+</ol>
+</div>
+</section>
+<section class="contact-band" aria-labelledby="collaboration-heading">
+<div class="container">
+<div>
+<p class="eyebrow">Work with Abide Labs</p>
+<h2 id="collaboration-heading">Have a problem worth building for?</h2>
+<p>Tell us what people need to do and where the current process breaks.</p>
+</div>
+<a class="button" href="/contact/">Discuss a project <span class="arrow" aria-hidden="true">↗</span>
+</a>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container">
+<div class="footer-top">
+<a class="brand" href="/" aria-label="Abide Labs home">
+<img src="/assets/brand/wordmark.webp" width="440" height="59" alt="Abide">
+<small>LABS</small>
+</a>
+<div class="footer-links">
+<a href="/projects/">Projects</a>
+<a href="/capabilities/">Capabilities</a>
+<a href="/contact/">Contact</a>
+<a href="https://www.linkedin.com/company/abide-labs/">LinkedIn</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Abide Labs. Independent product development.</span>
+<div class="footer-links">
+<a href="/privacy.html">Privacy</a>
+<a href="/terms.html">Terms</a>
+<a href="/support.html">Product support</a>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

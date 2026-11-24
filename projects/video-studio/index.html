@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Video Studio | Abide Labs Project Notes</title>
+<meta name="description" content="Internal tools for supervised AI video production, connecting scripts, narration, presenter assets, B-roll, captions, editing, and review.">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#0F1B2D">
+<link rel="canonical" href="https://abide-labs.com/projects/video-studio/">
+<link rel="icon" href="/assets/brand/mark.webp" type="image/webp">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Abide Labs">
+<meta property="og:title" content="AI Video Studio | Abide Labs Project Notes">
+<meta property="og:description" content="Internal tools for supervised AI video production, connecting scripts, narration, presenter assets, B-roll, captions, editing, and review.">
+<meta property="og:url" content="https://abide-labs.com/projects/video-studio/">
+<meta property="og:image" content="https://abide-labs.com/assets/social-share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Abide Labs. AI products and systems, built with purpose.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Video Studio | Abide Labs Project Notes">
+<meta name="twitter:description" content="Internal tools for supervised AI video production, connecting scripts, narration, presenter assets, B-roll, captions, editing, and review.">
+<meta name="twitter:image" content="https://abide-labs.com/assets/social-share.jpg">
+<link rel="stylesheet" href="/assets/site.css">
+<script defer src="/assets/site.js">
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://abide-labs.com/#organization","name":"Abide Labs","url":"https://abide-labs.com/","email":"hello@abide-labs.com","logo":"https://abide-labs.com/logo-icon.png","description":"Independent development of AI-powered products, workflow systems, and creative production tools."},{"@type":"WebSite","@id":"https://abide-labs.com/#website","name":"Abide Labs","url":"https://abide-labs.com/","publisher":{"@id":"https://abide-labs.com/#organization"}},{"@type":"WebPage","@id":"https://abide-labs.com/projects/video-studio/#webpage","url":"https://abide-labs.com/projects/video-studio/","name":"AI Video Studio | Abide Labs Project Notes","description":"Internal tools for supervised AI video production, connecting scripts, narration, presenter assets, B-roll, captions, editing, and review.","isPartOf":{"@id":"https://abide-labs.com/#website"},"about":{"@id":"https://abide-labs.com/#organization"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://abide-labs.com/"},{"@type":"ListItem","position":2,"name":"Projects","item":"https://abide-labs.com/projects/"},{"@type":"ListItem","position":3,"name":"AI Video Studio","item":"https://abide-labs.com/projects/video-studio/"}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="container nav-wrap">
+<a class="brand" href="/" aria-label="Abide Labs home">
+<img src="/assets/brand/wordmark.webp" width="440" height="59" alt="Abide">
+<small>LABS</small>
+</a>
+<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+<nav class="nav-links" id="primary-nav" aria-label="Main navigation">
+<a href="/projects/" aria-current="page">Projects</a>
+<a href="/capabilities/">Capabilities</a>
+<a href="/#about">About</a>
+<a href="/contact/" class="nav-contact">Get in touch</a>
+</nav>
+</div>
+</header>
+<main id="main">
+<section class="page-hero">
+<div class="container">
+<nav class="breadcrumb" aria-label="Breadcrumb">
+<a href="/">Home</a>
+<span aria-hidden="true">/</span>
+<a href="/projects/">Projects</a>
+<span aria-hidden="true">/</span>
+<span aria-current="page">AI Video Studio</span>
+</nav>
+<p class="eyebrow">Project notes / AI Video Studio</p>
+<h1>A supervised workflow for AI video production.</h1>
+<p class="status-line">Internal working tools; continued development</p>
+</div>
+</section>
+<section class="section">
+<div class="container case-layout">
+<aside class="case-aside">
+<dl>
+<div>
+<dt>Project</dt>
+<dd>AI Video Studio</dd>
+</div>
+<div>
+<dt>Status</dt>
+<dd>Internal working tools; continued development</dd>
+</div>
+<div>
+<dt>Focus</dt>
+<dd>Script-to-export production workflow</dd>
+</div>
+</dl>
+<a href="/projects/" class="text-link">All projects</a>
+</aside>
+<div class="article">
+<h2>The problem</h2>
+<p>A video project can spread across scripts, audio files, generated takes, captions, and editing tools. A revision to one part can leave the others out of sync. Production needs a way to preserve earlier work and identify the version ready for review.</p>
+<h2>What has been built</h2>
+<p>Our internal video tooling organizes scripts, narration, presenter references, B-roll, timelines, and exports. It supports review records and versioned assets so editorial decisions can stay connected to the production work.</p>
+<figure class="project-visual" aria-label="Video Studio supervised production workflow">
+<div class="diagram-heading">AI Video Studio / Supervised production</div>
+<div class="studio-flow">
+<div>
+<small>01</small>Script &amp; narration</div>
+<div>
+<small>02</small>Presenter &amp; B-roll</div>
+<div>
+<small>03</small>Timeline &amp; captions</div>
+<div>
+<small>04</small>Review &amp; export</div>
+</div>
+<figcaption class="diagram-caption">A workflow map, with human review before final approval.</figcaption>
+</figure>
+<h2>How the work is supervised</h2>
+<p>Generation and editorial assembly have separate checks. A completed render is a candidate for review. Approving a take or narration does not automatically approve the final video.</p>
+<p>Development also examines resumable production, asset reuse, and explicit spending limits for paid generation. Provider and workflow readiness vary; those controls do not imply every generation step is fully automated.</p>
+<h2>Current status</h2>
+<p>AI Video Studio describes internal working production tools and ongoing integration work. It is not a publicly available software subscription. Unattended end-to-end production is not claimed.</p>
+<div class="note">We can discuss the workflow without publishing client media, presenter libraries, or private production records. <a href="/contact/?topic=Video%20production">Ask about the production approach</a>.</div>
+</div>
+</div>
+</section>
+<section class="contact-band" aria-labelledby="collaboration-heading">
+<div class="container">
+<div>
+<p class="eyebrow">Work with Abide Labs</p>
+<h2 id="collaboration-heading">Have a problem worth building for?</h2>
+<p>Tell us what people need to do and where the current process breaks.</p>
+</div>
+<a class="button" href="/contact/">Discuss a project <span class="arrow" aria-hidden="true">↗</span>
+</a>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container">
+<div class="footer-top">
+<a class="brand" href="/" aria-label="Abide Labs home">
+<img src="/assets/brand/wordmark.webp" width="440" height="59" alt="Abide">
+<small>LABS</small>
+</a>
+<div class="footer-links">
+<a href="/projects/">Projects</a>
+<a href="/capabilities/">Capabilities</a>
+<a href="/contact/">Contact</a>
+<a href="https://www.linkedin.com/company/abide-labs/">LinkedIn</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Abide Labs. Independent product development.</span>
+<div class="footer-links">
+<a href="/privacy.html">Privacy</a>
+<a href="/terms.html">Terms</a>
+<a href="/support.html">Product support</a>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>
